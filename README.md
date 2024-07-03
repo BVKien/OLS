@@ -23,6 +23,8 @@
 * B2: Mở terminal của dự án
 * B3: Đi đến đường dẫn chính xác - sử dụng lệnh cd(change directory) + tab -> đi đến đường dẫn **.../OLS-UI/ols-ui**
 * B4: Chạy câu lệnh **npm start**
+* B5: Chạy câu lệnh **ctrl + s** để hot reload
+* B6: Chạy câu lệnh **ctrl + c** chọn **Y** để dừng chạy dự án FE
 
 ## Database: 
 * Sử dụng quản lý và lưu trữ bằng Microsoft SQL Server Management
