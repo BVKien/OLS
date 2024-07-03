@@ -10,6 +10,9 @@
 * Nơi lưu trữ và quản lý sử dụng github
 * Link source code dự án: https://github.com/BVKien/OLS
 
+## Documentation 
+* Link doc và quản lý dự án: https://docs.google.com/document/d/1eBnk5G2QKJD_Kb2lZHuhyHZ94d6zml_0KsX5Fg-MDDE/edit
+
 ## Back-end:
 * IDE Visual studio
 * Framework .NET core 6.0
