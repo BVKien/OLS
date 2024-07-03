@@ -1,0 +1,144 @@
+// Responsive 
+// grid - 12cols 
+// space between 10px
+.grid {
+    width: var(--default-grid);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.col-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc((100% / 12) * 3);
+}
+
+.course-image {
+    width: 100%;
+    object-fit: contain;
+}
+
+.course-heading {
+    margin-top: 40px;
+}
+
+.course-item {
+    width: 320px;
+    height: 310px;
+    background-color: var(--white);
+    border-radius: 15px;
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    margin-top: 24px;
+    box-shadow: 0 0 1px #ccc;
+    transition: transform linear 0.2s;
+    will-change: transform;
+    cursor: pointer;
+}
+
+.course-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1px 8px #ccc;
+}
+
+.course-item__link {
+    text-decoration: none;
+}
+
+.course-item__image {
+    width: 298px;
+    height: 166px;
+    // object-fit: contain;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.course-item__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+
+.course-item__learningPath {
+    font-size: 1.2rem;
+    color: #6e6e6e;
+    display: flex;
+    align-items: center;
+}
+
+.course-item__learningPath__image {
+    width: 25px;
+    height: 25px;
+    border-radius: 10%;
+    margin-right: 4px;
+}
+
+.course-item__name {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--black);
+    padding-top: 18px;
+}
+
+.course-item__footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.course-item__fee {
+    color: red;
+}
+
+.course-item__course-degree {
+    color: var(--primary);
+}
+
+.free {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 54px;
+    height: 20px;
+    background-color: var(--white);
+    box-shadow: 0 0 1px #ccc;
+    border-radius: 5px;
+}
+
+.free-title {
+    display: flex;
+    justify-content: center;
+    line-height: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.show-more {
+    margin: 14px 0 24px;
+}
+
+.btn-show-more {
+    width: 130px;
+    height: 35px;
+}
+
+.btn-show-more:hover {
+    color: rgb(0, 52, 124);
+}
+
+.btn-show-more__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}

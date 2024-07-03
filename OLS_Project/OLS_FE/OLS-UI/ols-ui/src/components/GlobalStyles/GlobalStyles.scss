@@ -1,0 +1,119 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
+
+:root {
+    // đặt biến dùng chung
+    --primary: #0056d2;
+    --black: #000;
+    --white: #fff;
+    --text-color: #333;
+
+    // font falmily 
+    --font-family: 'Montserrat', 'sans-serif';
+
+    // Default layout
+    --default-layout-header-height: 60px;
+    --default-layout-header-width: 1420px; // 100% - 1150px
+    --default-layout-header-horizontal-spacer: 24px;
+    --default-layout-width: 1420px;
+    --default-grid: 1380px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // font-size: 100%;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+// body {
+//     font-family: var(--font-family);
+//     font-size: 1rem;
+//     line-height: 1.5;
+//     text-rendering: optimizeSpeed;
+//     color: var(--text-color);
+//     overflow-y: overlay;
+//     width: 100%; 
+//     // width: var(--default-layout-width);
+//     margin: auto;
+// }
+
+// body {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     font-family: var(--font-family);
+//     font-size: 1rem;
+//     line-height: 1.5;
+//     text-rendering: optimizeSpeed;
+//     color: var(--text-color);
+//     overflow-y: overlay;
+//     width: 100%; 
+//     margin: auto;
+// }
+
+// crollbar css tiktok
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+}
+
+html ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.06);
+}
+
+html ::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button, 
+input, 
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+// custom tippy tooltip
+//body .tippy-box {}
+
+// Fonts emmbeded
+@font-face {
+    font-family: 'Montserrat', 'sans-serif';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
+}
+
+// Animation 
+// fadeIn - hiện dần lên 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+// growth - lớn dần lên 
+@keyframes growth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

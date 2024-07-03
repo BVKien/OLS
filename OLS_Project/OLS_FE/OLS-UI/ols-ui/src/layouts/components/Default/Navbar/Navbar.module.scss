@@ -1,0 +1,14 @@
+.wrapper {
+    position: fixed;
+    left: 0;
+    top: calc(var(--default-layout-header-height));
+    width: 100%;
+    margin: auto;
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    // padding-top: 14px;
+    padding-right: 1140px;
+    z-index: 9;
+}

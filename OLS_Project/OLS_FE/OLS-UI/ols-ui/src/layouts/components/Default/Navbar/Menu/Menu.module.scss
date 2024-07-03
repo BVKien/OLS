@@ -1,0 +1,42 @@
+.menu-item {
+    display: inline-flex; // mới
+    //display: flex; // cũ
+    align-items: center;
+    padding: 8px 18px 8px 8px;
+    font-size: 1.6rem;
+    font-weight: 600; // độ dày
+    border-radius: 5px;
+    color: var(--text-color);
+    transition: background-color ease-in-out 200ms;
+
+    &.active {
+        background-color: #2a73cc;
+
+        color: #fff;
+
+        .icon {
+            display: none;
+        }
+
+        .active-icon {
+            display: flex;
+        }
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.icon, 
+.active-icon {
+    display: flex;
+}
+
+.title {
+    margin-left: 10px;
+}
+
+.active-icon {
+    display: none;
+}

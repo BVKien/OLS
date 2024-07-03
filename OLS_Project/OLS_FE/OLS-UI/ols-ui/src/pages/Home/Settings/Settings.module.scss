@@ -1,0 +1,127 @@
+.wrapper {
+    background-color: transparent;
+}
+
+.grid {
+    width: var(--default-grid);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    width: calc((100% / 12) * 3 - 18px);
+}
+
+.col-9 {
+    width: calc((100% / 12) * 9);
+}
+
+.settings__side-bar {
+    width: 100%;
+    height: 100%;
+}
+
+.settings__side-bar__heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.settings__select {
+    margin-top: 24px;
+    margin-right: 24px;
+    padding-left: 10px;
+}
+.settings__option {
+    width: 100%;
+    padding: 10px;
+}
+
+.settings__option-item {
+    text-decoration: none;
+    width: 100%;
+}
+
+// current put in div -> handle to Link - ul li 
+.selected {
+    background-color: rgba(204, 204, 204, 0.2);
+    border-radius: 5px;
+}
+
+.settings__option-item-icon {
+    font-size: 1.8rem;
+    color: var(--black);
+    padding-right: 6px;
+}
+
+.settings__option-item-title {
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.settings__content {
+    background-color: var(--white)
+}
+
+.settings__content-heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-top: 10px;
+}
+
+.settings__user-info {
+    margin-top: 8px;
+    border-top: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.user-info__avatar-wrap {
+
+}
+
+.user-info__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 24px;
+}
+
+.user-info__name-wrap,
+.user-info__email-wrap,
+.user-info__phone-wrap,
+.user-info__password-wrap {
+    margin-top: 60px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.user-info__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.user-info__name-input,
+.user-info__email-input,
+.user-info__phone-input,
+.user-info__password-input {
+    font-size: 1.4rem;
+    color: var(--black);
+    margin-top: 8px;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.settings-save {
+    margin-top: 24px;
+}
+
+.settings-save__btn {
+    padding: 8px 34px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}

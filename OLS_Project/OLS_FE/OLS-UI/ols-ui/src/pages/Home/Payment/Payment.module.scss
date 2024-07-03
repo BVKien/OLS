@@ -1,0 +1,238 @@
+.wrapper {
+    background-color: transparent;
+}
+
+.grid {
+    width: var(--default-grid);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    width: calc((100% / 12) * 12);
+}
+
+.col-3 {
+    width: calc((100% / 12) * 3 - 18px);
+}
+
+.col-9 {
+    width: calc((100% / 12) * 9);
+}
+
+.payment-sidebar {
+    width: 95%;
+    height: 500px;
+    background-color: var(--white);
+}
+
+.payment-sidebar__heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.course-info {
+    width: 100%;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.course-info__course-wrap {
+    padding: 10px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.course-info__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 24px;
+}
+
+.course-info__course-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 4px;
+}
+
+.course-info__code-wrap {
+    padding: 10px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+.course-info__payment-code {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 14px;
+}
+
+.course-info__code {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 4px;
+}
+
+.payment-details {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.payment-details__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.course-price {
+    margin-top: 10px;
+}
+
+.course-price-details,
+.course-price-sum {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8px;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+    border-radius: 5px;
+}
+
+.course-price-details__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.course-price-details__price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: orange;
+}
+
+.course-price-sum__title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.course-price-sum__price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: red;
+}
+
+.payment-content {
+    width: 100%;
+}
+
+.payment-qr-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 8px;
+}
+
+.payment-qr {
+    display: flex;
+}
+
+.payment-qr__image {
+    width: 240px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.payment-qr__content {
+    width: 100%;
+    margin-top: 74px;
+
+    p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--black);
+        margin: 8px 0;
+    }
+}
+
+.payment-manual-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 16px;
+}
+
+.payment-manual {
+    width: 100%;
+}
+
+.payment-manual__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.payment-manual__content__account-number,
+.payment-manual__content__account-name,
+.payment-manual__content__transfer-content,
+.payment-manual__content-branch {
+    width: 500px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid rgba(204, 204, 204, 1);
+    margin: 4px;
+    border-radius: 5px;
+
+    p {
+        font-size: 1.2rem;
+        color: var(--text-color);
+    }
+
+    span {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--black);
+    }
+}
+
+.payment-manual__content__transfer-content {
+    span {
+        color: var(--primary);
+    }
+}
+
+.payment-notice-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 24px;
+}
+
+.payment-notice {
+    width: 100%;
+}
+
+.payment-notice__content {
+    margin: 8px 0;
+    color: var(--black);
+    font-size: 1.4rem;
+}
+
+.payment-notice_phone ,
+.payment-notice__email,
+.payment-notice__address {
+    color: var(--black);
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+
+.payment-notice-icon {
+    color: var(--black);
+    margin-right: 6px;
+    font-size: 1.4rem;
+}

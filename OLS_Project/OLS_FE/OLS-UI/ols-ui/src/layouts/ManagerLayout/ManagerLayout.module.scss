@@ -1,0 +1,126 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(242, 246, 253, 0.1);
+    margin-top: calc(var(--default-layout-header-height) - 10px);
+}
+
+.container {
+    width: var(--default-layout-header-width);
+    max-width: 100%;
+    padding: 0 var(--default-layout-header-horizontal-spacer);
+    margin-top: 130px;
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}
+
+.grid {
+    width: var(--default-grid);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.col-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc((100% / 12) * 12);
+}
+
+.side-bar-wrap {
+    width: 5%;
+}
+
+.action-menu {
+    font-size: 2.4rem;
+    color: var(--primary);
+    padding: 4px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.action-menu:hover {
+    opacity: 0.5;
+}
+
+.side-bar {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 90px;
+    transition: linear 0.2s;
+
+    ul {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+nav.menu-close {
+    width: 0;
+}
+
+.manager-list {
+    width: 100%;
+    list-style-type: none;
+    margin-top: 8px;
+}
+
+.manager-item__link {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: linear 0.2s;
+
+    &.active {
+        border-radius: 10px;
+        background-color: rgba(204, 204, 204, 0.2);
+        color: var(--primary);
+    }
+}
+
+.manager-item__link:hover {
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.2);
+    color: var(--primary);
+}
+
+.manager-item__icon {
+    width: 100%;
+}
+
+.manager-item__title {
+    margin-top: 4px;
+}
+
+
+.content {
+    position: relative;
+    top: -72px;
+    left: 40px;
+    transition: ease-in-out 0.2s;
+    width: 100%;
+    height: 100%;
+}
+
+.content.menu-close {
+    left: 0;
+}
