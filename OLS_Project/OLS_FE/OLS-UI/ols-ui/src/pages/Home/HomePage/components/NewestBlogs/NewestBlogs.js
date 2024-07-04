@@ -10,7 +10,7 @@ import Image from '~/components/Image';
 import Button from '~/components/Button';
 
 // apis
-import apis from '~/services/apis/apis';
+import customerApi from '~/services/apis/customerApi';
 
 const cx = classNames.bind(styles);
 
@@ -23,7 +23,7 @@ const NewestBlogs = () => {
 
     const getDataFromApi = async () => {
         try {
-            const response = await axios.get(apis.customerApis.get_all_blog);
+            const response = await axios.get(customerApi.blog.get_all_blog);
             if (!response.status === 200) {
                 throw new Error('Network is not ok. Cannot connect to API.');
             }

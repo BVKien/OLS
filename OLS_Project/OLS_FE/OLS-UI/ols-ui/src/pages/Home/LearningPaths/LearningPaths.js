@@ -14,7 +14,7 @@ import logo from '~/assets/images/logo.svg';
 import config from '~/config';
 
 // apis
-import apis from '~/services/apis/apis';
+import apis from '~/services/apis/customerApi';
 
 // quy ước viết tắt của classNames
 const cx = classNames.bind(styles);

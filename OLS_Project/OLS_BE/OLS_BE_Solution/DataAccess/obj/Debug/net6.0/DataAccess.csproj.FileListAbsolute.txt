@@ -1,0 +1,16 @@
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.sourcelink.json
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.Up2Date
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

@@ -3,24 +3,104 @@
   "WorkspaceRootPath": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\authdao\\authdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\authdao\\authdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\profiles\\modelprofiles\\coursemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\coursemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\dtos\\authdtos\\validateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\authdtos\\validateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\modeldao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\configuration\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\configuration\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\modeldao\\lessondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\lessondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\controllers\\admincontrollers\\lessonadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\controllers\\admincontrollers\\lessonadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\controllers\\admincontrollers\\chapteradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\controllers\\admincontrollers\\chapteradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\interfaces\\modelinterfaces\\ilessonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\interfaces\\modelinterfaces\\ilessonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\implements\\modelimplements\\lessonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\implements\\modelimplements\\lessonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\profiles\\modelprofiles\\lessonmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\lessonmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\modeldao\\chapterdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\chapterdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\implements\\modelimplements\\chapterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\implements\\modelimplements\\chapterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\interfaces\\modelinterfaces\\ichapterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\interfaces\\modelinterfaces\\ichapterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\dataaccess\\dao\\modeldao\\coursedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\coursedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\models\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\models\\chapter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\dtos\\chapterdtos\\chaptercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\chapterdtos\\chaptercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\profiles\\modelprofiles\\chaptermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\chaptermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\dtos\\chapterdtos\\chapterupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\chapterdtos\\chapterupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\dtos\\lessondtos\\lessonreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\lessondtos\\lessonreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\dtos\\lessondtos\\lessonupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\lessondtos\\lessonupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\dtos\\lessondtos\\lessoncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\lessondtos\\lessoncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\modeldao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\authdao\\authdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\authdao\\authdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\dtos\\authdtos\\validateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\authdtos\\validateaccountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -247,10 +327,6 @@
       "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\blogtopicmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\profiles\\modelprofiles\\chaptermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\chaptermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\models\\blogtopic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\models\\blogtopic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -303,10 +379,6 @@
       "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\quizdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\dataaccess\\dao\\modeldao\\coursedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\coursedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\dataaccess\\dao\\modeldao\\feedbackdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\feedbackdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -325,7 +397,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 132,
+          "DockedWidth": 137,
           "SelectedChildIndex": 64,
           "Children": [
             {
@@ -586,20 +658,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "LessonDao.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\LessonDao.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\LessonDao.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\LessonDao.cs",
+              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\LessonDao.cs",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAswIUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T13:13:41.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChapterDao.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:45:25.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CourseDao.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\CourseDao.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\CourseDao.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\CourseDao.cs",
+              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\CourseDao.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T13:21:15.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Chapter.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Chapter.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Models\\Chapter.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Chapter.cs",
+              "RelativeToolTip": "BusinessObject\\Models\\Chapter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T10:20:01.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChapterCreateDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\ChapterDtos\\ChapterCreateDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\ChapterDtos\\ChapterCreateDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\ChapterDtos\\ChapterCreateDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\ChapterDtos\\ChapterCreateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T10:21:00.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChapterUpdateDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\ChapterDtos\\ChapterUpdateDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\ChapterDtos\\ChapterUpdateDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\ChapterDtos\\ChapterUpdateDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\ChapterDtos\\ChapterUpdateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T10:21:17.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LessonReadDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LessonDtos\\LessonReadDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\LessonDtos\\LessonReadDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LessonDtos\\LessonReadDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\LessonDtos\\LessonReadDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T10:21:25.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LessonUpdateDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LessonDtos\\LessonUpdateDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\LessonDtos\\LessonUpdateDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LessonDtos\\LessonUpdateDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\LessonDtos\\LessonUpdateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:38:32.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Lesson.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Lesson.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Models\\Lesson.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Lesson.cs",
+              "RelativeToolTip": "BusinessObject\\Models\\Lesson.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:38:37.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LessonCreateDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LessonDtos\\LessonCreateDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\LessonDtos\\LessonCreateDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LessonDtos\\LessonCreateDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\LessonDtos\\LessonCreateDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:38:22.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "UserDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\UserDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\UserDao.cs",
               "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\UserDao.cs",
               "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\UserDao.cs",
-              "ViewState": "AQIAACIBAAAAAAAAAAAwwGYBAAAFAAAA",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAcwGYBAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T10:42:10.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 33,
               "Title": "NotificationDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\NotificationDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\NotificationDao.cs",
@@ -611,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 32,
               "Title": "BlogDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\BlogDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\BlogDao.cs",
@@ -623,7 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 34,
               "Title": "UserCreateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\UserDtos\\UserCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\UserDtos\\UserCreateDto.cs",
@@ -635,7 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 45,
               "Title": "Notification.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Notification.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\Notification.cs",
@@ -647,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 50,
               "Title": "UserRoleDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\UserRoleDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\UserRoleDao.cs",
@@ -659,7 +861,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 53,
               "Title": "UserRoleReadDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\UserRoleDtos\\UserRoleReadDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\UserRoleDtos\\UserRoleReadDto.cs",
@@ -671,7 +873,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 55,
               "Title": "UserRoleMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\UserRoleMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\UserRoleMappingProfile.cs",
@@ -683,7 +885,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 56,
               "Title": "UserRoleCretaeDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\UserRoleDtos\\UserRoleCretaeDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\UserRoleDtos\\UserRoleCretaeDto.cs",
@@ -695,7 +897,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 54,
               "Title": "UserRoleUpdateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\UserRoleDtos\\UserRoleUpdateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\UserRoleDtos\\UserRoleUpdateDto.cs",
@@ -707,7 +909,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 57,
               "Title": "BlogCommentDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\BlogCommentDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\BlogCommentDao.cs",
@@ -719,7 +921,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 77,
               "Title": "BlogTopicDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\BlogTopicDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\BlogTopicDao.cs",
@@ -731,7 +933,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 68,
               "Title": "Blog.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Blog.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\Blog.cs",
@@ -743,7 +945,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 62,
               "Title": "AskAndReplyDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\AskAndReplyDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\AskAndReplyDao.cs",
@@ -755,7 +957,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 81,
               "Title": "BlogTopic.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\BlogTopic.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\BlogTopic.cs",
@@ -767,7 +969,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 91,
               "Title": "AnswerDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\AnswerDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\AnswerDao.cs",
@@ -779,7 +981,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 92,
               "Title": "QuestionDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\QuestionDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\QuestionDao.cs",
@@ -791,7 +993,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 95,
               "Title": "CourseCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\CourseCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\CourseCustomerController.cs",
@@ -803,7 +1005,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 93,
               "Title": "QuizDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\QuizDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\QuizDao.cs",
@@ -815,7 +1017,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 94,
               "Title": "FeedBackDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\FeedBackDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\FeedBackDao.cs",
@@ -827,7 +1029,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 96,
               "Title": "DiscussDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\DiscussDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\DiscussDao.cs",
@@ -836,25 +1038,39 @@
               "ViewState": "AQIAACEAAAAAAAAAAAAYwFcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T10:50:25.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "CourseDao.cs",
-              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\CourseDao.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\CourseDao.cs",
-              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\CourseDao.cs",
-              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\CourseDao.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAowJkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T13:21:15.195Z"
             }
           ]
         },
         {
-          "DockedWidth": 362,
-          "SelectedChildIndex": 15,
+          "DockedWidth": 357,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CourseMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T14:35:36.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "OLSWebAPI\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-04T14:30:28.192Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -917,20 +1133,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "RelativeToolTip": "OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAkwIgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T13:08:17.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LessonAdminController.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\LessonAdminController.cs",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AdminControllers\\LessonAdminController.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\LessonAdminController.cs",
+              "RelativeToolTip": "OLSWebAPI\\Controllers\\AdminControllers\\LessonAdminController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAF4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T13:31:37.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LessonRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\LessonRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\LessonRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\LessonRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Implements\\ModelImplements\\LessonRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T13:29:55.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Program.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Program.cs",
+              "RelativeToolTip": "OLSWebAPI\\Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwCIAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T15:30:01.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ILessonRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\ILessonRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\ILessonRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\ILessonRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Interfaces\\ModelInterfaces\\ILessonRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T13:29:18.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LessonMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:44:34.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChapterAdminController.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\ChapterAdminController.cs",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AdminControllers\\ChapterAdminController.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\ChapterAdminController.cs",
+              "RelativeToolTip": "OLSWebAPI\\Controllers\\AdminControllers\\ChapterAdminController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T13:04:09.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChapterRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\ChapterRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\ChapterRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\ChapterRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Implements\\ModelImplements\\ChapterRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:59:39.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IChapterRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IChapterRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IChapterRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IChapterRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Interfaces\\ModelInterfaces\\IChapterRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T12:58:53.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "AuthDao.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\AuthDao\\AuthDao.cs",
               "RelativeDocumentMoniker": "DataAccess\\Dao\\AuthDao\\AuthDao.cs",
               "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\AuthDao\\AuthDao.cs",
               "RelativeToolTip": "DataAccess\\Dao\\AuthDao\\AuthDao.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAAAAL0AAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwL0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T12:57:18.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
+              "Title": "ChapterMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T16:58:19.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "ValidateAccountDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\AuthDtos\\ValidateAccountDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\AuthDtos\\ValidateAccountDto.cs",
@@ -938,36 +1284,11 @@
               "RelativeToolTip": "BusinessObject\\Dtos\\AuthDtos\\ValidateAccountDto.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAxwCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T15:35:19.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T15:35:19.906Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "OLSWebAPI\\Program.cs",
-              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Program.cs",
-              "RelativeToolTip": "OLSWebAPI\\Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAqwCUAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T15:30:01.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Configuration\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "OLSWebAPI\\Configuration\\ServiceExtensions.cs",
-              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Configuration\\ServiceExtensions.cs",
-              "RelativeToolTip": "OLSWebAPI\\Configuration\\ServiceExtensions.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAvwIgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T13:08:17.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 25,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "OLSWebAPI\\appsettings.json",
@@ -979,7 +1300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 26,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AuthControllers\\AuthController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AuthControllers\\AuthController.cs",
@@ -991,7 +1312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 27,
               "Title": "UserAdminController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\UserAdminController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AdminControllers\\UserAdminController.cs",
@@ -1003,7 +1324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 28,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\UserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\UserRepository.cs",
@@ -1015,7 +1336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 29,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IUserRepository.cs",
@@ -1027,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 30,
               "Title": "UserCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\UserCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\UserCustomerController.cs",
@@ -1039,7 +1360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 31,
               "Title": "UserRoleRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\UserRoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\UserRoleRepository.cs",
@@ -1051,7 +1372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 35,
               "Title": "UserMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\UserMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\UserMappingProfile.cs",
@@ -1063,7 +1384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 38,
               "Title": "NotificationAdminController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\NotificationAdminController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AdminControllers\\NotificationAdminController.cs",
@@ -1075,7 +1396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 36,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\User.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\User.cs",
@@ -1087,7 +1408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 37,
               "Title": "SaveBlog.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\SaveBlog.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\SaveBlog.cs",
@@ -1099,7 +1420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 39,
               "Title": "NotificationCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\NotificationCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\NotificationCustomerController.cs",
@@ -1111,7 +1432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 41,
               "Title": "NotificationRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\NotificationRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\NotificationRepository.cs",
@@ -1123,7 +1444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 40,
               "Title": "INotificationRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\INotificationRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\INotificationRepository.cs",
@@ -1135,7 +1456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 42,
               "Title": "AnswerAdminController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\AnswerAdminController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AdminControllers\\AnswerAdminController.cs",
@@ -1147,7 +1468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 43,
               "Title": "NotificationMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\NotificationMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\NotificationMappingProfile.cs",
@@ -1159,7 +1480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 44,
               "Title": "NotificationReadDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\NotificationDtos\\NotificationReadDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\NotificationDtos\\NotificationReadDto.cs",
@@ -1171,7 +1492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 46,
               "Title": "Course.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\Course.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\Course.cs",
@@ -1183,7 +1504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 47,
               "Title": "NotificationUpdateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\NotificationDtos\\NotificationUpdateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\NotificationDtos\\NotificationUpdateDto.cs",
@@ -1195,7 +1516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 48,
               "Title": "NotificationCreateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\NotificationDtos\\NotificationCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\NotificationDtos\\NotificationCreateDto.cs",
@@ -1207,7 +1528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 49,
               "Title": "UserRoleAdminController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\AdminControllers\\UserRoleAdminController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\AdminControllers\\UserRoleAdminController.cs",
@@ -1219,7 +1540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 51,
               "Title": "IUserRoleRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IUserRoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IUserRoleRepository.cs",
@@ -1231,7 +1552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 58,
               "Title": "IAnswerRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IAnswerRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IAnswerRepository.cs",
@@ -1243,7 +1564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 52,
               "Title": "BlogCommentCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\BlogCommentCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\BlogCommentCustomerController.cs",
@@ -1255,7 +1576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 59,
               "Title": "IBlogCommentRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogCommentRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogCommentRepository.cs",
@@ -1267,7 +1588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 60,
               "Title": "BlogCommentRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\BlogCommentRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\BlogCommentRepository.cs",
@@ -1279,7 +1600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 61,
               "Title": "IBlogTopicRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogTopicRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogTopicRepository.cs",
@@ -1291,7 +1612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 63,
               "Title": "BlogCommentReadDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogCommentDtos\\BlogCommentReadDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogCommentDtos\\BlogCommentReadDto.cs",
@@ -1303,7 +1624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 64,
               "Title": "BlogCommentMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogCommentMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\BlogCommentMappingProfile.cs",
@@ -1315,7 +1636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 65,
               "Title": "BlogMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\BlogMappingProfile.cs",
@@ -1327,7 +1648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 66,
               "Title": "BlogCommentUpdateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogCommentDtos\\BlogCommentUpdateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogCommentDtos\\BlogCommentUpdateDto.cs",
@@ -1339,7 +1660,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 67,
               "Title": "BlogCommentCreateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogCommentDtos\\BlogCommentCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogCommentDtos\\BlogCommentCreateDto.cs",
@@ -1351,7 +1672,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 69,
               "Title": "BlogComment.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\BlogComment.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\BlogComment.cs",
@@ -1363,7 +1684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 70,
               "Title": "AskAndReplyCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\AskAndReplyCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\AskAndReplyCustomerController.cs",
@@ -1375,7 +1696,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 71,
               "Title": "SaveBlogCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\SaveBlogCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\SaveBlogCustomerController.cs",
@@ -1387,7 +1708,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 72,
               "Title": "ISaveBlogRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\ISaveBlogRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\ISaveBlogRepository.cs",
@@ -1399,7 +1720,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 73,
               "Title": "SaveBlogRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\SaveBlogRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\SaveBlogRepository.cs",
@@ -1411,7 +1732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 74,
               "Title": "SaveBlogMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\SaveBlogMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\SaveBlogMappingProfile.cs",
@@ -1423,7 +1744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 76,
               "Title": "SaveBlogCreateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\SaveBlogDtos\\SaveBlogCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\SaveBlogDtos\\SaveBlogCreateDto.cs",
@@ -1435,7 +1756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 75,
               "Title": "SaveBlogReadDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\SaveBlogDtos\\SaveBlogReadDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\SaveBlogDtos\\SaveBlogReadDto.cs",
@@ -1447,7 +1768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 78,
               "Title": "BlogTopicCustomerController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\BlogTopicCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\BlogTopicCustomerController.cs",
@@ -1459,7 +1780,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 79,
               "Title": "BlogTopicUpdateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicUpdateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicUpdateDto.cs",
@@ -1471,7 +1792,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 80,
               "Title": "BlogTopicMappingProfile.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogTopicMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\BlogTopicMappingProfile.cs",
@@ -1483,19 +1804,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "ChapterMappingProfile.cs",
-              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
-              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
-              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
-              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\ChapterMappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T16:58:19.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 83,
               "Title": "BlogTopicCreateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicCreateDto.cs",
@@ -1507,7 +1816,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 82,
               "Title": "BlogTopicReadDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicReadDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicReadDto.cs",
@@ -1519,7 +1828,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 85,
               "Title": "BlogReadDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogDtos\\BlogReadDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogDtos\\BlogReadDto.cs",
@@ -1531,7 +1840,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 84,
               "Title": "BlogUpdateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogDtos\\BlogUpdateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogDtos\\BlogUpdateDto.cs",
@@ -1543,7 +1852,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 86,
               "Title": "BlogCreateDto.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogDtos\\BlogCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogDtos\\BlogCreateDto.cs",
@@ -1555,7 +1864,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 88,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\AuthInterfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\AuthInterfaces\\IEmailService.cs",
@@ -1567,7 +1876,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 87,
               "Title": "AuthRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\AuthImplements\\AuthRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\AuthImplements\\AuthRepository.cs",
@@ -1579,7 +1888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 89,
               "Title": "AskAndReplyRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\AskAndReplyRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\AskAndReplyRepository.cs",
@@ -1591,7 +1900,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 90,
               "Title": "IAskAndReplyRepository.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IAskAndReplyRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IAskAndReplyRepository.cs",

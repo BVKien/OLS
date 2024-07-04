@@ -23,7 +23,7 @@ const HomePage = () => {
                         {/* <CoursesHaveFee /> */}
                         <CoursesFree />
                         <NewestBlogs />
-                        <LearningPaths />
+                        {/* <LearningPaths /> */}
                     </div>
                 </div>
             </div>

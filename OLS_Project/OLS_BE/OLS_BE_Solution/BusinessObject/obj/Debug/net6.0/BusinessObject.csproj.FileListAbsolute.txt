@@ -1,0 +1,15 @@
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.sourcelink.json
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
+D:\FPT_University_Hoa_Lac\Ky_8_Summer_2024\PRN231\Final_Project\OLS_Project\OLS_BE\OLS_BE_Solution\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll

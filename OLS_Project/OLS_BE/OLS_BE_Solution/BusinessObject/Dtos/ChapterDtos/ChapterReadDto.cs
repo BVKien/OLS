@@ -14,4 +14,13 @@ namespace BusinessObject.Dtos.ChapterDtos
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
     }
+
+    public class ChapterReadDtoForAdmin
+    {
+        public int ChapterId { get; set; }
+        public string? ChapterName { get; set; }
+        public int CourseCourseId { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+    }
 }

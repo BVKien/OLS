@@ -12,7 +12,7 @@ import Button from '~/components/Button';
 import config from '~/config';
 
 // apis
-import apis from '~/services/apis/apis';
+import customerApi from '~/services/apis/customerApi';
 
 const cx = classNames.bind(styles);
 
@@ -25,7 +25,7 @@ const CoursesFree = () => {
 
     const isCourseEnrolled = async (courseId) => {
         try {
-            const response = await axios.get(apis.customerApis.get_course_detail + '/' + courseId);
+            const response = await axios.get(customerApi.course.get_course_detail + '/' + courseId);
             return response.data; // Assuming the API returns true or false
         } catch (error) {
             console.error('Error checking course enrollment:', error.message);
@@ -35,7 +35,7 @@ const CoursesFree = () => {
 
     const fetchDataFromApi = async () => {
         try {
-            const response = await axios.get(apis.customerApis.get_all_free_course);
+            const response = await axios.get(customerApi.course.get_all_free_course);
 
             if (response.status !== 200) {
                 throw new Error('Network is not ok.');

@@ -11,7 +11,7 @@ import Image from '~/components/Image';
 import config from '~/config';
 
 // apis
-import apis from '~/services/apis/apis';
+import apis from '~/services/apis/customerApi';
 
 const cx = classNames.bind(styles);
 

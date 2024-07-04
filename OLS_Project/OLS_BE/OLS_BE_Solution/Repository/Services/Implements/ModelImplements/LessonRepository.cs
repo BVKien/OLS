@@ -18,7 +18,20 @@ namespace Repository.Services.Implements.ModelImplements
             _lessonDao = lessonDao;
         }
 
+        // == customer == 
         public List<LessonReadDtoForCustomer> GetAllLessonByChapterId(int chapterId)
-            => _lessonDao.GetAllLessonByChapterId(chapterId);
+            => _lessonDao.GetAllLessonByChapterIdForCustomer(chapterId);
+
+        // == admin == 
+        public List<LessonReadDtoForAdmin> GetAllLessonByChapterIdForAdmin(int chapterId)
+            => _lessonDao.GetAllLessonByChapterIdForAdmin(chapterId);
+        public LessonReadDtoForAdmin GetLessonDetailByLessonIdForAdmin(int lessonId)
+            => _lessonDao.GetLessonDetailByLessonIdForAdmin(lessonId);
+        public void CreateLesson(LessonCreateDtoForAdmin lesson)
+            => _lessonDao.CreateLesson(lesson);
+        public void UpdateLesson(int lessonId, int chapterId, LessonUpdateDtoForAdmin lesson)
+            => _lessonDao.UpdateLesson(lessonId, chapterId, lesson);
+        public void DeleteLesson(int lessonId, int chapterId)
+            => _lessonDao.DeleteLesson(lessonId, chapterId);
     }
 }

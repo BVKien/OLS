@@ -14,9 +14,15 @@ namespace BusinessObject.Profiles.ModelProfiles
         public ChapterMappingProfile()
         {
             // dest => src 
+            // == customer == 
             CreateMap<Chapter, ChapterReadDtoForCustomer>()
                 .ForMember(dest => dest.CourseName, opt => opt.MapFrom(src => src.CourseCourse.CourseName))
                 .ReverseMap();
+
+            // == admin == 
+            CreateMap<Chapter, ChapterReadDtoForAdmin>().ReverseMap();
+            CreateMap<Chapter, ChapterCreateDtoForAdmin>().ReverseMap();
+            CreateMap<Chapter, ChapterUpdateDtoForAdmin>().ReverseMap();
         }
     }
 }
