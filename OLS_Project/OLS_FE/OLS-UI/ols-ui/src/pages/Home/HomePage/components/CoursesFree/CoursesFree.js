@@ -16,6 +16,8 @@ import customerApi from '~/services/apis/customerApi';
 
 const cx = classNames.bind(styles);
 
+// hard code
+var userId = 46;
 const CoursesFree = () => {
     const [courses, setCourses] = useState([]);
 
@@ -23,9 +25,11 @@ const CoursesFree = () => {
         fetchDataFromApi();
     }, []);
 
-    const isCourseEnrolled = async (courseId) => {
+    const isCourseEnrolled = async (courseId, userId) => {
         try {
-            const response = await axios.get(customerApi.course.get_course_detail + '/' + courseId);
+            const response = await axios.get(
+                customerApi.courseEnrolled.check_course_register_by_user + '/' + courseId + '/' + userId,
+            );
             return response.data; // Assuming the API returns true or false
         } catch (error) {
             console.error('Error checking course enrollment:', error.message);
@@ -43,7 +47,7 @@ const CoursesFree = () => {
 
             const coursesWithEnrollmentStatus = await Promise.all(
                 response.data.map(async (course) => {
-                    const isEnrolled = await isCourseEnrolled(course.courseId);
+                    const isEnrolled = await isCourseEnrolled(course.courseId, userId);
                     return { ...course, isEnrolled };
                 }),
             );

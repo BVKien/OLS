@@ -106,6 +106,8 @@ const adminApi = {
     discuss,
     learningPath,
     notification,
+    chapter,
+    lesson,
     question,
     quiz,
     user,

@@ -27,5 +27,19 @@ namespace OLSWebAPI.Controllers.CustomerControllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("get_lesson_detail/{lesson_id}")]
+        public ActionResult<IEnumerable<LessonReadDtoForCustomer>> GetLessonDetail(int lesson_id)
+        {
+            try
+            {
+                var lesson = _repo.GetLessonDetailByLessonIdForCustomer(lesson_id);
+                return Ok(lesson);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

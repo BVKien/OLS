@@ -2,6 +2,7 @@
 using BusinessObject.Dtos.CourseDto;
 using BusinessObject.Models;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace DataAccess.Dao
 {
@@ -56,6 +57,29 @@ namespace DataAccess.Dao
             }
 
             return courseDetail;
+        }
+
+        // get all courses by learning path id 
+        public List<CourseReadDtoForCustomer> GetAllCourseByLearningPathIdForCustomer(int learningPathId)
+        {
+            var listCourses = new List<CourseReadDtoForCustomer>();
+            try
+            {
+                using (var context = new OLS_PRN231_V1Context())
+                {
+                    var courses = context.Courses
+                        .Include(c => c.LearningPathLearningPath)
+                        .Where(c => c.LearningPathLearningPathId == learningPathId)
+                        .ToList();
+                    listCourses = _mapper.Map<List<CourseReadDtoForCustomer>>(courses);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return listCourses;
         }
 
         // == admin == 
@@ -138,7 +162,7 @@ namespace DataAccess.Dao
                     // update course
                     _mapper.Map(course, courseDetail);
 
-                    context.Entry(courseDetail).State = 
+                    context.Entry(courseDetail).State =
                         Microsoft.EntityFrameworkCore.EntityState.Modified;
                     context.SaveChanges();
                 }

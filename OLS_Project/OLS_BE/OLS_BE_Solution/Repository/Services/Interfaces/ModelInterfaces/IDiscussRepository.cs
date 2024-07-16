@@ -9,7 +9,7 @@ namespace Repository.Services.Interfaces.ModelInterfaces
 {
     public interface IDiscussRepository
     {
-        DiscussReadDtoForCustomer GetDiscussionDetail(int discussId, int lessonId);
+        DiscussReadDtoForCustomer GetDiscussionDetail(int lessonId);
         void CreateDiscussion(DiscussCreateDtoForAdmin dc);
         void DeleteDiscussion(int discussId, int lessonId);
     }

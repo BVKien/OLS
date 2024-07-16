@@ -6,7 +6,7 @@ namespace Repository.Services.Interfaces.ModelInterfaces
     {
         // == customer == 
         List<ChapterReadDtoForCustomer> GetAllChapterByCourseId(int courseId);
-
+        
         // == admin == 
         List<ChapterReadDtoForAdmin> GetAllChapterByCourseIdForAdmin(int courseId);
         ChapterReadDtoForAdmin GetChapterDetailByChapterIdAndCourseId(int chapterId, int courseId);

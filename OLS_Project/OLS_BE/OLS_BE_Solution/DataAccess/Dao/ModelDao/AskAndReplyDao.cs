@@ -2,11 +2,6 @@
 using BusinessObject.Dtos.AskAndReplyDtos;
 using BusinessObject.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Dao.ModelDao
 {
@@ -28,8 +23,9 @@ namespace DataAccess.Dao.ModelDao
                 using (var context = new OLS_PRN231_V1Context())
                 {
                     var list = context.AskAndReplies
-                        .Where(ar => ar.DiscussDiscussId == discussId)
+                        .Where(ar => ar.DiscussDiscussId == discussId && ar.ReplyForAskId == null)
                         .Include(ar => ar.UserUser)
+                        .OrderByDescending(ar => ar.CreatedAt)
                         .ToList();
                     listAR = _mapper.Map<List<AskAndReplyReadDtoForCustomer>>(list);
                 }
@@ -40,6 +36,103 @@ namespace DataAccess.Dao.ModelDao
             }
 
             return listAR;
+        }
+
+        // get all replies by ask id 
+        public List<AskAndReplyReadDtoForCustomer> GetAllReplyByDiscussIdAndAskId(int discussId, int askId)
+        {
+            var replyList = new List<AskAndReplyReadDtoForCustomer>();
+            try
+            {
+                using (var context = new OLS_PRN231_V1Context())
+                {
+                    var list = context.AskAndReplies
+                        .Where(ar => ar.DiscussDiscussId == discussId
+                        && ar.ReplyForAskId == askId)
+                        .Include(ar => ar.UserUser)
+                        .OrderByDescending(ar => ar.CreatedAt)
+                        .ToList();
+                    replyList = _mapper.Map<List<AskAndReplyReadDtoForCustomer>>(list);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return replyList;
+        }
+
+        // count all replies by ask id 
+        public float CountAllReplyByDiscussIdAndAskId(int discussId, int askId)
+        {
+            try
+            {
+                using (var context = new OLS_PRN231_V1Context())
+                {
+                    var quantity = context.AskAndReplies
+                        .Where(ar => ar.DiscussDiscussId == discussId
+                        && ar.ReplyForAskId == askId)
+                        .Include(ar => ar.UserUser)
+                        .Count();
+                    return quantity;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        // get ask detail 
+        public AskAndReplyReadDtoForCustomer GetAskDetail(int arId, int discussId)
+        {
+            try
+            {
+                using (var context = new OLS_PRN231_V1Context())
+                {
+                    var arDetail = new AskAndReplyReadDtoForCustomer();
+                    var ask = context.AskAndReplies
+                        .FirstOrDefault(a => a.AskId == arId
+                        && a.ReplyForAskId == null
+                        && a.DiscussDiscussId == discussId);
+                    if (ask == null)
+                    {
+                        throw new Exception("Not found ask.");
+                    }
+                    arDetail = _mapper.Map<AskAndReplyReadDtoForCustomer>(ask);
+                    return arDetail;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        // get reply detail 
+        public AskAndReplyReadDtoForCustomer GetReplyDetail(int arId, int discussId)
+        {
+            try
+            {
+                using (var context = new OLS_PRN231_V1Context())
+                {
+                    var arDetail = new AskAndReplyReadDtoForCustomer();
+                    var reply = context.AskAndReplies
+                        .FirstOrDefault(a => a.AskId == arId
+                        && a.DiscussDiscussId == discussId);
+                    if (reply == null)
+                    {
+                        throw new Exception("Not found reply.");
+                    }
+                    arDetail = _mapper.Map<AskAndReplyReadDtoForCustomer>(reply);
+                    return arDetail;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         // ===
@@ -54,16 +147,7 @@ namespace DataAccess.Dao.ModelDao
             {
                 using (var context = new OLS_PRN231_V1Context())
                 {
-                    var arCreateInfo = new AskAndReplyCreateDtoForCustomer
-                    {
-                        ReplyForAskId = ar.ReplyForAskId,
-                        ContentFor = ar.ContentFor,
-                        Image = ar.Image,
-                        DiscussDiscussId = ar.DiscussDiscussId,
-                        CreatedAt = ar.CreatedAt,
-                        UpdatedAt = ar.UpdatedAt,
-                    };
-                    var newAr = _mapper.Map<AskAndReply>(arCreateInfo);
+                    var newAr = _mapper.Map<AskAndReply>(ar);
                     context.AskAndReplies.Add(newAr);
                     context.SaveChanges();
                 }
@@ -115,7 +199,6 @@ namespace DataAccess.Dao.ModelDao
                 {
                     // find 
                     var arDetail = context.AskAndReplies
-                        .Include(ar => ar.UserUser)
                         .FirstOrDefault(ar => ar.AskId == arId
                         && ar.UserUserId == userId
                         && ar.DiscussDiscussId == discussId);

@@ -7,6 +7,7 @@ namespace Repository.Services.Interfaces.ModelInterface
         // == customer == 
         List<CourseReadDtoForCustomer> GetAllCourseForCustomer();
         CourseReadDtoForCustomer GetCourseByCourseIdForCustomer(int courseId);
+        List<CourseReadDtoForCustomer> GetAllCourseByLearningPathIdForCustomer(int learningPathId);
 
         // == admin == 
         List<CourseReadDtoForAdmin> GetAllCourseForAdmin();

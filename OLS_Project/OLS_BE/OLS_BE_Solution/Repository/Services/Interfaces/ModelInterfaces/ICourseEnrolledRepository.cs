@@ -9,6 +9,7 @@ namespace Repository.Services.Interfaces.ModelInterfaces
 {
     public interface ICourseEnrolledRepository
     {
+        bool IsCourseRegisterByUser(int courseId, int userId);
         void CreateCourseEnrolled(CourseEnrolledCreateDtoForCustomer ceInfo);
     }
 }

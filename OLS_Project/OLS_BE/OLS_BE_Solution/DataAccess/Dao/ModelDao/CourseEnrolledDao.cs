@@ -17,28 +17,28 @@ namespace DataAccess.Dao.ModelDao
             _mapper = mapper;
         }
 
-        // check exist course enrolled | user 
-        public bool IsExistedCourseByUser(int courseId, int userId)
+        // check is register? 
+        public bool IsCourseRegisterByUser(int courseId, int userId)
         {
             try
             {
                 using (var context = new OLS_PRN231_V1Context())
                 {
-                    var ceInfo = context.CourseEnrolleds
-                        .Where(ce => ce.CourseCourseId == courseId && ce.UserUserId == userId)
-                        .FirstOrDefault();
-                    if (ceInfo != null)
+                    var check = context.CourseEnrolleds
+                        .FirstOrDefault(c => c.CourseCourseId == courseId
+                        && c.UserUserId == userId);
+                    if (check != null)
                     {
-                        return false;
+                        return true;
                     }
-
-                    return true;
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
+            return false;
         }
 
         // register course -> create a new course enrolled
@@ -47,8 +47,8 @@ namespace DataAccess.Dao.ModelDao
             try
             {
                 // check exited
-                bool checkExist = IsExistedCourseByUser(ceInfo.CourseCourseId, ceInfo.UserUserId);
-                if (checkExist == false)
+                bool checkExist = IsCourseRegisterByUser(ceInfo.CourseCourseId, ceInfo.UserUserId);
+                if (checkExist == true)
                 {
                     throw new Exception("Course already registed.");
                 }

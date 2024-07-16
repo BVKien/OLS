@@ -82,7 +82,7 @@ namespace DataAccess.Dao.AuthDao
 
                 if (user == null)
                 {
-                    throw new Exception("User not found.");
+                    throw new Exception("Invalid email or password.");
                 }
 
                 // Generate verification code

@@ -29,6 +29,7 @@ namespace DataAccess.Dao.ModelDao
                 {
                     var list = context.Answers
                         .Include(a => a.QuestionQuestion)
+                        .Where(a => a.QuestionQuestionId == questionId)
                         .ToList();
                     listAnswer = _mapper.Map<List<AnswerReadDtoForCustomer>>(list);
                 }

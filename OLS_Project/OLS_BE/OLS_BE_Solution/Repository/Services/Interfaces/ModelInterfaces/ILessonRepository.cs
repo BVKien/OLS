@@ -11,6 +11,7 @@ namespace Repository.Services.Interfaces.ModelInterfaces
     {
         // == customer == 
         List<LessonReadDtoForCustomer> GetAllLessonByChapterId(int chapterId);
+        LessonReadDtoForCustomer GetLessonDetailByLessonIdForCustomer(int lessonId);
 
         // == admin == 
         List<LessonReadDtoForAdmin> GetAllLessonByChapterIdForAdmin(int chapterId);

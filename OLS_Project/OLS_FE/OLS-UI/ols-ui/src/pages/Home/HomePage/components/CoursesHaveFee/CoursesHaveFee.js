@@ -11,8 +11,12 @@ import Image from '~/components/Image';
 import Button from '~/components/Button';
 import config from '~/config';
 
+// customer api
+import customerApi from '~/services/apis/customerApi';
+
 const cx = classNames.bind(styles);
 
+var userId = 46;
 const CoursesHaveFee = () => {
     const [courses, setCourses] = useState([]);
 
@@ -21,9 +25,11 @@ const CoursesHaveFee = () => {
         fetchDataFromApi();
     }, []);
 
-    const isCourseEnrolled = async (courseId) => {
+    const isCourseEnrolled = async (courseId, userId) => {
         try {
-            const response = await axios.get(`https://localhost:7158/IsCourseEnrolled/${courseId}`);
+            const response = await axios.get(
+                customerApi.courseEnrolled.check_course_register_by_user + '/' + courseId + '/' + userId,
+            );
 
             return response.data; // Assuming the API returns true or false
         } catch (error) {
@@ -34,7 +40,7 @@ const CoursesHaveFee = () => {
 
     const fetchDataFromApi = async () => {
         try {
-            const response = await axios.get('https://localhost:7158/get10CoursesWithFee');
+            const response = await axios.get(customerApi.course.get_all_free_course);
 
             if (response.status !== 200) {
                 throw new Error('Network is not ok.');
@@ -42,7 +48,7 @@ const CoursesHaveFee = () => {
 
             const coursesWithEnrollmentStatus = await Promise.all(
                 response.data.map(async (course) => {
-                    const isEnrolled = await isCourseEnrolled(course.courseId);
+                    const isEnrolled = await isCourseEnrolled(course.courseId, userId);
                     return { ...course, isEnrolled };
                 }),
             );

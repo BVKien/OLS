@@ -8,6 +8,7 @@ namespace BusinessObject.Dtos.NoteDtos
 {
     public class NoteReadDtoForCustomer
     {
+        public int NoteId { get; set; }
         public string? ContentFor { get; set; }
         public int UserUserId { get; set; }
         public string? UserName { get; set; }

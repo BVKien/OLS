@@ -18,6 +18,8 @@ namespace Repository.Services.Implements.ModelImplement
             => _courseDao.GetAllCourseForCustomer();
         public CourseReadDtoForCustomer GetCourseByCourseIdForCustomer(int courseId)
             => _courseDao.GetCourseByCourseIdForCustomer(courseId);
+        public List<CourseReadDtoForCustomer> GetAllCourseByLearningPathIdForCustomer(int learningPathId)
+            => _courseDao.GetAllCourseByLearningPathIdForCustomer(learningPathId);
 
         // == admin ==
         public List<CourseReadDtoForAdmin> GetAllCourseForAdmin()

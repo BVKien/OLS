@@ -10,7 +10,8 @@ namespace BusinessObject.Dtos.AskAndReplyDtos
     {
         public int AskId { get; set; }
         public int? UserUserId { get; set; }
-        public string? UserName { get; set; }
+        public string? FullName { get; set; }
+        public string? Avatar { get; set; }
         public int? ReplyForAskId { get; set; }
         public string? ContentFor { get; set; }
         public string? Image { get; set; }

@@ -21,6 +21,8 @@ namespace Repository.Services.Implements.ModelImplements
         // == customer == 
         public List<LessonReadDtoForCustomer> GetAllLessonByChapterId(int chapterId)
             => _lessonDao.GetAllLessonByChapterIdForCustomer(chapterId);
+        public LessonReadDtoForCustomer GetLessonDetailByLessonIdForCustomer(int lessonId)
+            =>_lessonDao.GetLessonDetailByLessonIdForCustomer(lessonId);
 
         // == admin == 
         public List<LessonReadDtoForAdmin> GetAllLessonByChapterIdForAdmin(int chapterId)

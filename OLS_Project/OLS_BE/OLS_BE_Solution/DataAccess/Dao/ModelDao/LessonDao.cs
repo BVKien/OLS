@@ -42,6 +42,32 @@ namespace DataAccess.Dao.ModelDao
             return listLesson;
         }
 
+        // get lesson detail by lesson id
+        public LessonReadDtoForCustomer GetLessonDetailByLessonIdForCustomer(int lessonId)
+        {
+            var lessonDetail = new LessonReadDtoForCustomer();
+            try
+            {
+                using (var context = new OLS_PRN231_V1Context())
+                {
+                    var lesson = context.Lessons
+                        .Include(l => l.ChapterChapter)
+                        .FirstOrDefault(l => l.LessonId == lessonId);
+                    if (lesson == null)
+                    {
+                        throw new Exception("Not found lesson.");
+                    }
+                    lessonDetail = _mapper.Map<LessonReadDtoForCustomer>(lesson);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return lessonDetail;
+        }
+
         // == admin == 
         // get all lesson by chapter id 
         public List<LessonReadDtoForAdmin> GetAllLessonByChapterIdForAdmin(int chapterId)

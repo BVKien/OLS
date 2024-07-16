@@ -18,8 +18,8 @@ namespace Repository.Services.Implements.ModelImplements
             _discussDao = discussDao;
         }
 
-        public DiscussReadDtoForCustomer GetDiscussionDetail(int discussId, int lessonId)
-            => _discussDao.GetDiscussionDetail(discussId, lessonId);
+        public DiscussReadDtoForCustomer GetDiscussionDetail(int lessonId)
+            => _discussDao.GetDiscussionDetail(lessonId);
         public void CreateDiscussion(DiscussCreateDtoForAdmin dc)
             => _discussDao.CreateDiscussion(dc);
         public void DeleteDiscussion(int discussId, int lessonId)

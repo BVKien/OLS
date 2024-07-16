@@ -14,7 +14,7 @@ import logo from '~/assets/images/logo.svg';
 import config from '~/config';
 
 // apis
-import apis from '~/services/apis/customerApi';
+import customerApi from '~/services/apis/customerApi';
 
 // quy ước viết tắt của classNames
 const cx = classNames.bind(styles);
@@ -28,7 +28,7 @@ const LearningPaths = () => {
 
     const getDataFromApi = async () => {
         try {
-            const response = await axios.get(apis.customerApis.get_all_learning_path);
+            const response = await axios.get(customerApi.learningPath.get_all_learning_path);
 
             if (!response.status === 200) {
                 throw new Error('Network is not ok. Cannot connect to API.');

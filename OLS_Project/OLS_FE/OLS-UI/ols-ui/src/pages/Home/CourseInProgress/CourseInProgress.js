@@ -12,12 +12,17 @@ import { faComment, faImage } from '@fortawesome/free-regular-svg-icons';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
 
+// customer api
+import customerApi from '~/services/apis/customerApi';
+
 const cx = classNames.bind(styles);
 
 const CourseInProgress = () => {
     // == States to track ==
     // -- User --
     const [userDetails, setUserDetails] = useState('');
+
+    // -- Chapter --
 
     // -- Course content --
     const [courseDetails, setCourseDetails] = useState('');
@@ -36,10 +41,10 @@ const CourseInProgress = () => {
     const [replyCount, setReplyCount] = useState(null);
 
     // Other way to defined an Api --> more clear, more easy to maintain
-    const createAskApiUrl = 'https://localhost:7158/createAsk';
+    const createAskApiUrl = customerApi.conversation.create_ask_or_reply;
     const createAskData = {
-        askContent: '',
         userUserId: '',
+        contentFor: '',
         image: '',
         discussDiscussId: '',
     };
@@ -49,16 +54,25 @@ const CourseInProgress = () => {
 
     const [askDetails, setAskDetails] = useState('');
     const updateAskData = {
-        askContent: '',
+        userUserId: '',
+        contentFor: '',
         image: '',
     };
     const [userUpdateAskInput, setUserUpdateAskInput] = useState(updateAskData);
 
-    const createReplyApiUrl = 'https://localhost:7158/createReply';
-    const createReplyData = {
-        replyContent: '',
-        askAskId: '',
+    // -- Reply --
+    const [replyDetails, setReplyDetails] = useState('');
+    const updateReplyData = {
         userUserId: '',
+        contentFor: '',
+        image: '',
+    };
+    const [userUpdateReplyInput, setUserUpdateReplyInput] = useState(updateReplyData);
+    const [selectedReplyUpdateImage, setSelectedReplyUpdateImage] = useState(null);
+
+    const createReplyApiUrl = customerApi.conversation.create_ask_or_reply;
+    const createReplyData = {
+        contentFor: '',
         image: '',
     };
     const [userReplyInput, setUserReplyInput] = useState(createReplyData);
@@ -68,8 +82,43 @@ const CourseInProgress = () => {
     const [selectedAskIdForActionEdit, setSelectedAskIdForActionEdit] = useState(null);
     const [selectedAskIdForActionDelete, setSelectedAskIdForActionDelete] = useState(null);
 
+    // -- Reply --
+    const [selectedReplyIdForActions, setSelectedReplyIdForActions] = useState(null);
+    const [selectedReplyIdForActionEdit, setSelectedReplyIdForActionEdit] = useState(null);
+    const [selectedReplyIdForActionDelete, setSelectedReplyIdForActionDelete] = useState(null);
+
     // -- Note --
     const [showNote, setShowNote] = useState(false);
+    const [notes, setNotes] = useState([]);
+    const createNoteApiUrl = customerApi.note.create_note;
+    const createNoteData = {
+        userUserId: '',
+        contentFor: '',
+        lessonLessonId: '',
+    };
+    const [userNoteInput, setUserNoteInput] = useState(createNoteData);
+
+    const updateNoteData = {
+        contentFor: '',
+    };
+    const [userUpdateNoteInput, setUserUpdateNoteInput] = useState(updateNoteData);
+    const [selectedNoteIdForActionEdit, setSelectedNoteIdForActionEdit] = useState(null);
+    const [selectedNoteIdForActionDelete, setSelectedNoteIdForActionDelete] = useState(null);
+
+    // -- Quiz --
+    const [quizzes, setQuizzes] = useState([]);
+    const [selectedLessonId, setSelectedLessonId] = useState(null);
+    const [selectedQuizIdForQuestionAndAnswer, setSelectedQuizIdForQuestionAndAnswer] = useState(null);
+
+    // -- Question --
+    const [questions, setQuestions] = useState([]);
+    const [selectedQuizId, setSelectedQuizId] = useState(null);
+
+    // -- Answer --
+    const [answers, setAnswers] = useState([]);
+    const [selectedQuestionId, setSelectedQuestionId] = useState(null);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [answerStatus, setAnswerStatus] = useState(null);
 
     // -- Others --
     const [loading, setLoading] = useState(true);
@@ -81,7 +130,7 @@ const CourseInProgress = () => {
     const lessonId = urlParams.get('lessonId');
 
     // Self defined
-    const userId = 2; // hard code
+    const userId = 46; // hard code
     const isCurrentUser = userDetails && userDetails.userId === userId;
 
     // -- Course content --
@@ -121,10 +170,56 @@ const CourseInProgress = () => {
         setSelectedAskIdForActionDelete(null);
     };
 
+    // Toggle discuss reply action delete
+    const handleToggleReplyActionDelete = (askId, replyForAskId) => {
+        setSelectedReplyIdForActionDelete((prevId) => (prevId === askId ? null : askId));
+    };
+
+    // Toggle discuss reply action delete cancel
+    const handleToggleReplyActionDeleteCancel = () => {
+        setSelectedReplyIdForActionDelete(null);
+    };
+
+    // Toggle discuss reply actions
+    const handleToggleReplyActions = (askId) => {
+        setSelectedReplyIdForActions((prevId) => (prevId === askId ? null : askId));
+    };
+
+    // Toggle discuss ask action edit
+    const handleToggleReplyActionEdit = (askId, replyForAskId) => {
+        setSelectedReplyIdForActionEdit((prevId) => (prevId === askId ? null : askId));
+    };
+
     // -- Note --
     // Toggle note
     const handleToggleNote = () => {
         setShowNote((prevShowNote) => !prevShowNote);
+    };
+
+    // Toggle discuss note action delete
+    const handleToggleNoteActionDelete = (noteId) => {
+        setSelectedNoteIdForActionDelete((prevId) => (prevId === noteId ? null : noteId));
+    };
+
+    // Toggle discuss note action delete cancel
+    const handleToggleNoteActionDeleteCancel = () => {
+        setSelectedNoteIdForActionDelete(null);
+    };
+
+    // Toggle discuss note action edit
+    const handleToggleNoteActionEdit = (noteId) => {
+        setSelectedNoteIdForActionEdit((prevId) => (prevId === noteId ? null : noteId));
+    };
+
+    // -- Quiz --
+    // Toggle quiz to show questions and answers
+    const handleToggleQuiz = (quizId) => {
+        setSelectedQuizIdForQuestionAndAnswer((prevId) => (prevId === quizId ? null : quizId));
+    };
+
+    // Toggle discuss note action delete cancel
+    const handleToggleQuizCancel = () => {
+        setSelectedQuizIdForQuestionAndAnswer(null);
     };
 
     // -- Others --
@@ -138,7 +233,7 @@ const CourseInProgress = () => {
     useEffect(() => {
         const fetchUserDetailsByUserId = async () => {
             try {
-                const responseUser = await axios.get(`https://localhost:7158/getUserByUserId/${userId}`);
+                const responseUser = await axios.get(customerApi.user.get_user_info + '/' + userId);
                 setUserDetails(responseUser.data);
             } catch (error) {
                 console.error('Error fetching user:', error);
@@ -155,7 +250,7 @@ const CourseInProgress = () => {
     useEffect(() => {
         const fetchCourseDetailsFromCourseId = async () => {
             try {
-                const responseCourse = await axios.get(`https://localhost:7158/getCourseByCourseId_Home/${courseId}`);
+                const responseCourse = await axios.get(customerApi.course.get_course_detail + '/' + courseId);
                 setCourseDetails(responseCourse.data);
             } catch (error) {
                 console.error('Error fetching course:', error);
@@ -171,7 +266,9 @@ const CourseInProgress = () => {
     useEffect(() => {
         const fetchChaptersFromCourseId = async () => {
             try {
-                const responseChapters = await axios.get(`https://localhost:7158/getAllChaptersByCourseId/${courseId}`);
+                const responseChapters = await axios.get(
+                    customerApi.chapter.get_all_chapter_in_course + '/' + courseId,
+                );
                 setChapters(responseChapters.data);
             } catch (error) {
                 console.error('Error fetching course:', error);
@@ -189,7 +286,7 @@ const CourseInProgress = () => {
             try {
                 if (activeChapter !== null) {
                     const responseLessons = await axios.get(
-                        `https://localhost:7158/getAllLessonsByChapterId/${activeChapter}`,
+                        customerApi.lesson.get_all_lesson_in_chapter + '/' + activeChapter,
                     );
                     setLessons(responseLessons.data);
                 }
@@ -207,7 +304,7 @@ const CourseInProgress = () => {
     useEffect(() => {
         const fetchLessonDetailsFromLessonId = async () => {
             try {
-                const responseLesson = await axios.get(`https://localhost:7158/getLessonById/${lessonId}`);
+                const responseLesson = await axios.get(customerApi.lesson.get_lesson_detail + '/' + lessonId);
                 setLessonDetails(responseLesson.data);
             } catch (error) {
                 console.error('Error fetching lesson:', error);
@@ -224,7 +321,7 @@ const CourseInProgress = () => {
     useEffect(() => {
         const fetchDiscussDetailsFromLessonId = async () => {
             try {
-                const responseDiscuss = await axios.get(`https://localhost:7158/getDiscussByLessonId/${lessonId}`);
+                const responseDiscuss = await axios.get(customerApi.discuss.get_discussion_detail + '/' + lessonId);
                 setDiscussDetails(responseDiscuss.data);
             } catch (error) {
                 console.error('Error fetching discuss:', error);
@@ -242,7 +339,7 @@ const CourseInProgress = () => {
             try {
                 if (discussDetails && discussDetails.discussId) {
                     const responseAsks = await axios.get(
-                        `https://localhost:7158/getAllAskByDiscussId/${discussDetails.discussId}`,
+                        customerApi.conversation.get_all_conversation_in_discussion + '/' + discussDetails.discussId,
                     );
                     setAsks(responseAsks.data);
                 }
@@ -257,14 +354,16 @@ const CourseInProgress = () => {
     }, [discussDetails.discussId, asks.askId]);
 
     // Function handle fetch replies when askId changes
-    const handleFetchRepliesByAskId = async (askId) => {
+    const handleFetchRepliesByAskId = async (discussId, askId) => {
         try {
             // If the selectedAskId is the same as the current askId, set it to null --> close the replies
             setSelectedAskId((prevSelectedAskId) => (prevSelectedAskId === askId ? null : askId));
 
             // Fetch replies only if the selectedAskId is not the same as the current askId
             if (selectedAskId !== askId) {
-                const responseReplies = await axios.get(`https://localhost:7158/getAllRepliesByAskId/${askId}`);
+                const responseReplies = await axios.get(
+                    customerApi.conversation.get_all_reply_of_asker_in_discussion + '/' + discussId + '/' + askId,
+                );
                 setReplies(responseReplies.data);
             }
         } catch (error) {
@@ -277,7 +376,13 @@ const CourseInProgress = () => {
     // Function handle fetch count replies by askId
     const handleCountRepliesByAskId = async (askId) => {
         try {
-            const response = await axios.get(`https://localhost:7158/countRepliesByAskId/${askId}`);
+            const response = await axios.get(
+                customerApi.conversation.count_all_reply_of_asker_in_discussion +
+                    '/' +
+                    discussDetails.discussId +
+                    '/' +
+                    askId,
+            );
             const count = response.data; // Amount of replies
             setReplyCount(count);
         } catch (error) {
@@ -303,12 +408,13 @@ const CourseInProgress = () => {
                 setSelectedAskImage(reader.result);
             };
             reader.readAsDataURL(files[0]);
+            console.log(files, files[0]);
         }
 
         setUserAskInput({
             ...userAskInput,
             [name]: value,
-            userUserId: userDetails.userId,
+            userUserId: userId,
             discussDiscussId: discussDetails.discussId,
         });
     };
@@ -322,7 +428,7 @@ const CourseInProgress = () => {
             console.log('Create ask success', userAskInput);
             // Recall Api after create ask success
             const responseAsks = await axios.get(
-                `https://localhost:7158/getAllAskByDiscussId/${discussDetails.discussId}`,
+                customerApi.conversation.get_all_conversation_in_discussion + '/' + discussDetails.discussId,
             );
             setAsks(responseAsks.data);
             setUserAskInput(createAskData);
@@ -343,12 +449,16 @@ const CourseInProgress = () => {
         setSelectedAskImage(null);
     };
 
-    // Fetch ask details by askId
+    // Fetch ask details by ask id, reply for ask id, discuss id
     useEffect(() => {
         const fetchAskDetailsByAskId = async () => {
             try {
                 const responseAskDetails = await axios.get(
-                    `https://localhost:7158/getAskByAskId/${selectedAskIdForActionEdit}`,
+                    customerApi.conversation.get_ask_detail +
+                        '/' +
+                        selectedAskIdForActionEdit +
+                        '/' +
+                        discussDetails.discussId,
                 );
 
                 console.log(responseAskDetails);
@@ -390,13 +500,19 @@ const CourseInProgress = () => {
 
         try {
             await axios.put(
-                `https://localhost:7158/updateAskByAskID/${selectedAskIdForActionEdit}`,
+                customerApi.conversation.update_ask_or_reply +
+                    '/' +
+                    selectedAskIdForActionEdit +
+                    '/' +
+                    userId +
+                    '/' +
+                    discussDetails.discussId,
                 userUpdateAskInput,
             );
             console.log('Ask update success', userUpdateAskInput);
             // Recall Api after create update success
             const responseAsks = await axios.get(
-                `https://localhost:7158/getAllAskByDiscussId/${discussDetails.discussId}`,
+                customerApi.conversation.get_all_conversation_in_discussion + '/' + discussDetails.discussId,
             );
             setAsks(responseAsks.data);
 
@@ -417,15 +533,135 @@ const CourseInProgress = () => {
     // Handle delete ask by askId after confirmation
     const handleDeleteAskByAskId = async () => {
         try {
-            await axios.delete(`https://localhost:7158/deleteAskByAskId/${selectedAskIdForActionDelete}`);
+            await axios.delete(
+                customerApi.conversation.delete_ask_or_reply +
+                    '/' +
+                    selectedAskIdForActionDelete +
+                    '/' +
+                    userId +
+                    '/' +
+                    discussDetails.discussId,
+            );
             console.log('Delete ask success');
             const responseAsks = await axios.get(
-                `https://localhost:7158/getAllAskByDiscussId/${discussDetails.discussId}`,
+                customerApi.conversation.get_all_conversation_in_discussion + '/' + discussDetails.discussId,
             );
             setAsks(responseAsks.data);
             setSelectedAskIdForActionDelete(null);
         } catch (error) {
             console.error('Error deleting ask:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // == Reply ==
+    // get_reply_detail
+    useEffect(() => {
+        const fetchReplyDetailsByAskId = async () => {
+            try {
+                const responseReplyDetails = await axios.get(
+                    customerApi.conversation.get_reply_detail +
+                        '/' +
+                        selectedReplyIdForActionEdit +
+                        '/' +
+                        discussDetails.discussId,
+                );
+
+                console.log(responseReplyDetails);
+                setReplyDetails(responseReplyDetails.data);
+            } catch (error) {
+                console.error('Error fetching ask:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        if (selectedReplyIdForActionEdit) {
+            fetchReplyDetailsByAskId();
+        }
+    }, [selectedReplyIdForActionEdit]);
+
+    // Handle change value of user update input - Reply
+    const handleUpdateReplyInputChange = (event) => {
+        const { name, value, files } = event.target;
+
+        if (name === 'image' && files && files[0]) {
+            // Read image and update state preview
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setSelectedReplyUpdateImage(reader.result);
+            };
+            reader.readAsDataURL(files[0]);
+        }
+
+        setUserUpdateReplyInput({
+            ...userUpdateReplyInput,
+            [name]: value,
+        });
+    };
+
+    // Handle update reply by arId
+    const handleUpdateReply = async (event) => {
+        event.preventDefault();
+
+        try {
+            await axios.put(
+                customerApi.conversation.update_ask_or_reply +
+                    '/' +
+                    selectedReplyIdForActionEdit +
+                    '/' +
+                    userId +
+                    '/' +
+                    discussDetails.discussId,
+                userUpdateReplyInput,
+            );
+            console.log('Reply update success', userUpdateReplyInput);
+            // Recall Api after update success
+            const responseReplies = await axios.get(
+                customerApi.conversation.get_all_reply_of_asker_in_discussion +
+                    '/' +
+                    discussDetails.discussId +
+                    '/' +
+                    replyDetails.replyForAskId,
+            );
+            setReplies(responseReplies.data);
+
+            setSelectedReplyIdForActionEdit(null);
+            setSelectedReplyIdForActions(null);
+        } catch (error) {
+            console.error('Error updating ask:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Handle delete reply after confirmation
+    const handleDeleteReplyByReplyId = async () => {
+        try {
+            await axios.delete(
+                customerApi.conversation.delete_ask_or_reply +
+                    '/' +
+                    selectedReplyIdForActionDelete +
+                    '/' +
+                    userId +
+                    '/' +
+                    discussDetails.discussId,
+            );
+            console.log('Delete reply success');
+            // Recall Api after update success
+            const responseReplies = await axios.get(
+                customerApi.conversation.get_all_reply_of_asker_in_discussion +
+                    '/' +
+                    discussDetails.discussId +
+                    '/' +
+                    replyDetails.replyForAskId,
+            );
+            setReplies(responseReplies.data);
+            setSelectedReplyIdForActionDelete(null);
+            setSelectedReplyIdForActions(null);
+        } catch (error) {
+            console.error('Error deleting reply:', error);
         } finally {
             setLoading(false);
         }
@@ -446,22 +682,27 @@ const CourseInProgress = () => {
 
         setUserReplyInput({
             ...userReplyInput,
-            askAskId: askId, // Use the provided askId
+            replyForAskId: askId, // Use the provided askId
             userUserId: userDetails.userId,
+            discussDiscussId: discussDetails.discussId,
             [name]: value,
         });
     };
 
-    // Handle submit reply input
+    // Handle submit reply input - Create reply
     const handleSubmitReplyInput = async (event) => {
         event.preventDefault();
 
         try {
             await axios.post(createReplyApiUrl, userReplyInput);
             console.log('Create reply success', userReplyInput);
-            // Recall Api after create reply success
+            // Recall Api after update success
             const responseReplies = await axios.get(
-                `https://localhost:7158/getAllRepliesByAskId/${userReplyInput.askAskId}`,
+                customerApi.conversation.get_all_reply_of_asker_in_discussion +
+                    '/' +
+                    discussDetails.discussId +
+                    '/' +
+                    userReplyInput.replyForAskId,
             );
             setReplies(responseReplies.data);
             setUserReplyInput(createReplyData);
@@ -480,6 +721,241 @@ const CourseInProgress = () => {
     const handleReplyCancel = () => {
         setUserReplyInput('');
         setSelectedReplyImage(null);
+    };
+
+    // -- Note --
+    // Fetch notes when lessonId, userId changes
+    useEffect(() => {
+        const fetchNotesByLessonIdAndUserId = async () => {
+            try {
+                const responseNotes = await axios.get(
+                    customerApi.note.get_all_note_in_lesson_of_user + '/' + lessonDetails.lessonId + '/' + userId,
+                );
+                setNotes(responseNotes.data);
+            } catch (error) {
+                console.error('Error fetching:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchNotesByLessonIdAndUserId();
+    }, [lessonDetails.lessonId, userDetails.userId]);
+
+    // Handle submit note input
+    const handleSubmitNoteInput = async (event) => {
+        event.preventDefault();
+
+        try {
+            await axios.post(createNoteApiUrl, userNoteInput);
+            console.log('Create note success', userNoteInput);
+            // Recall Api after create success
+            const responseNotes = await axios.get(
+                customerApi.note.get_all_note_in_lesson_of_user + '/' + lessonDetails.lessonId + '/' + userId,
+            );
+            setNotes(responseNotes.data);
+            setUserNoteInput(createNoteData);
+        } catch (error) {
+            console.error('Error creating note:', error);
+        }
+    };
+
+    // Handle change value of user note input
+    const handleUserNoteInputChange = (event) => {
+        const { name, value } = event.target;
+
+        setUserNoteInput({
+            ...userNoteInput,
+            [name]: value,
+            userUserId: userId,
+            lessonLessonId: lessonDetails.lessonId,
+        });
+    };
+
+    // Handle delete note after confirmation
+    const handleDeleteNoteByNoteId = async () => {
+        try {
+            await axios.delete(customerApi.note.delete_note + '/' + selectedNoteIdForActionDelete);
+            console.log('Delete note success');
+            // Recall Api after delete success
+            const response = await axios.get(
+                customerApi.note.get_all_note_in_lesson_of_user + '/' + lessonDetails.lessonId + '/' + userId,
+            );
+            setNotes(response.data);
+            setSelectedNoteIdForActionDelete(null);
+        } catch (error) {
+            console.error('Error deleting note:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Handle change value of user note input
+    const handleUpdateNoteInputChange = (event) => {
+        const { name, value } = event.target;
+        setUserUpdateNoteInput({
+            ...userUpdateNoteInput,
+            [name]: value,
+        });
+    };
+
+    // Handle update reply by arId
+    const handleUpdateNote = async (event) => {
+        event.preventDefault();
+
+        try {
+            await axios.put(customerApi.note.update_note + '/' + selectedNoteIdForActionEdit, userUpdateNoteInput);
+            console.log('Note update success', userUpdateNoteInput);
+            // Recall Api after update success
+            const response = await axios.get(
+                customerApi.note.get_all_note_in_lesson_of_user + '/' + lessonDetails.lessonId + '/' + userId,
+            );
+            setNotes(response.data);
+
+            setSelectedNoteIdForActionEdit(null);
+        } catch (error) {
+            console.error('Error updating note:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Handle note cancel
+    const handleNoteCancel = () => {
+        setUserNoteInput('');
+    };
+
+    // -- Quiz --
+    // Fetch quizzes when lessonId changes
+    useEffect(() => {
+        const fetchQuizzesByLessonId = async () => {
+            try {
+                const response = await axios.get(
+                    customerApi.quiz.get_all_quiz_in_lesson + '/' + lessonDetails.lessonId,
+                );
+                setQuizzes(response.data);
+            } catch (error) {
+                console.error('Error fetching quiz:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchQuizzesByLessonId();
+    }, [lessonDetails.lessonId]);
+
+    // Function handle fetch quizzes when lessonId changes
+    const handleFetchGetAllQuizByLessonId = async (lessonId) => {
+        try {
+            // If the selectedAskId is the same as the current askId, set it to null --> close the replies
+            setSelectedLessonId((prevSelectedLessonId) => (prevSelectedLessonId === lessonId ? null : lessonId));
+
+            // Fetch quizzes only if the selectedLessonId is not the same as the current lessonId
+            if (selectedLessonId !== lessonId) {
+                const response = await axios.get(customerApi.quiz.get_all_quiz_in_lesson + '/' + lessonId);
+                setQuizzes(response.data);
+            }
+        } catch (error) {
+            console.error('Error fetching quizzes:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // -- Question --
+    // Fetch questions when quizId changes
+    const handleFetchGetAllQuestionByQuizId = async (quizId) => {
+        try {
+            // If the selectedAskId is the same as the current askId, set it to null --> close the replies
+            setSelectedQuizId((prevSelectedQuizId) => (prevSelectedQuizId === quizId ? null : quizId));
+
+            // Fetch quizzes only if the selectedLessonId is not the same as the current lessonId
+            if (selectedQuizId !== quizId) {
+                const response = await axios.get(customerApi.question.get_all_question_in_quiz + '/' + quizId);
+                setQuestions(response.data);
+            }
+        } catch (error) {
+            console.error('Error fetching questions:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // -- Answer --
+    // Fetch answers when questionId changes
+    const handleFetchGetAllAnswersByQuestionId = async (questionId) => {
+        try {
+            // If the Id is the same as the current Id, set it to null --> close
+            setSelectedQuestionId((prevSelectedId) => (prevSelectedId === questionId ? null : questionId));
+
+            // Fetch only if the selectedId is not the same as the current Id
+            if (selectedQuestionId !== questionId) {
+                const response = await axios.get(customerApi.answer.get_all_answer_of_question + '/' + questionId);
+                setAnswers(response.data);
+            }
+        } catch (error) {
+            console.error('Error fetching answers:', error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const fetchAnswersForQuestion = async (questionId) => {
+        try {
+            const response = await axios.get(customerApi.answer.get_all_answer_of_question + '/' + questionId);
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching answers:', error);
+            return [];
+        }
+    };
+
+    useEffect(() => {
+        const fetchAllAnswers = async () => {
+            const answersMap = {};
+            await Promise.all(
+                questions.map(async (question) => {
+                    const answers = await fetchAnswersForQuestion(question.questionId);
+                    answersMap[question.questionId] = answers;
+                }),
+            );
+            setAnswers(answersMap);
+            setLoading(false);
+        };
+
+        fetchAllAnswers();
+    }, [questions]);
+
+    const handleAnswerClick = async () => {
+        if (!selectedAnswer) return;
+        const { answerId, questionId } = selectedAnswer;
+        try {
+            const response = await axios.get(customerApi.answer.choose_answer + '/' + answerId + '/' + questionId);
+            setAnswerStatus(response.data);
+        } catch (error) {
+            console.error('Error selecting answer:', error);
+        }
+    };
+
+    useEffect(() => {
+        const fetchAllAnswers = async () => {
+            const answersMap = {};
+            await Promise.all(
+                questions.map(async (question) => {
+                    const answers = await fetchAnswersForQuestion(question.questionId);
+                    answersMap[question.questionId] = answers;
+                }),
+            );
+            setAnswers(answersMap);
+            setLoading(false);
+        };
+
+        fetchAllAnswers();
+    }, [questions]);
+
+    const handleSelectAnswer = (answerId, questionId) => {
+        setSelectedAnswer({ answerId, questionId });
+        setAnswerStatus(null); // Reset the status when a new answer is selected
     };
 
     // -- Others --
@@ -501,7 +977,7 @@ const CourseInProgress = () => {
                                 </div>
 
                                 <div className={cx('action-next')}>
-                                    <span>Bài tiếp theo</span> <FontAwesomeIcon icon={faArrowRight} />
+                                    {/* <span>Bài tiếp theo</span> <FontAwesomeIcon icon={faArrowRight} /> */}
                                 </div>
                             </div>
                             <nav
@@ -515,12 +991,16 @@ const CourseInProgress = () => {
                                     {chapters.map((chapter) => (
                                         <li
                                             key={chapter.chapterId}
-                                            className={cx(
-                                                `lesson-item ${activeChapter === chapter.chapterId ? 'active' : ''}`,
-                                            )}
-                                            onClick={() => handleToggleChapter(chapter.chapterId)}
+                                            className={cx('lesson-item', {
+                                                active: activeChapter === chapter.chapterId,
+                                            })}
                                         >
-                                            <p className={cx('chapter-item__name')}>{chapter.chapterName}</p>
+                                            <span
+                                                className={cx('chapter-item__name')}
+                                                onClick={() => handleToggleChapter(chapter.chapterId)}
+                                            >
+                                                {chapter.chapterName}
+                                            </span>
                                             {activeChapter === chapter.chapterId && (
                                                 <div className={cx('lesson-item__wrap')}>
                                                     {lessons.map((lesson) => (
@@ -528,12 +1008,203 @@ const CourseInProgress = () => {
                                                             <a
                                                                 href={`http://localhost:3003/course-in-progress?courseId=${courseId}&lessonId=${lesson.lessonId}`}
                                                                 onClick={(e) => {
-                                                                    handleToggleChapter(chapter.chapterId);
+                                                                    e.preventDefault();
                                                                     window.location.href = `http://localhost:3003/course-in-progress?courseId=${courseId}&lessonId=${lesson.lessonId}`;
                                                                 }}
                                                             >
                                                                 <p>{lesson.title}</p>
                                                             </a>
+                                                            <span
+                                                                className={cx('lesson-item__quiz')}
+                                                                onClick={() =>
+                                                                    handleFetchGetAllQuizByLessonId(lesson.lessonId)
+                                                                }
+                                                            >
+                                                                <FontAwesomeIcon icon={faPen} />
+                                                            </span>
+                                                            <div
+                                                                style={{
+                                                                    display:
+                                                                        selectedLessonId === lesson.lessonId
+                                                                            ? 'block'
+                                                                            : 'none',
+                                                                }}
+                                                            >
+                                                                {quizzes.map((quiz) => (
+                                                                    <span key={quiz.quizId}>
+                                                                        <p
+                                                                            onClick={() =>
+                                                                                handleToggleQuiz(quiz.quizId)
+                                                                            }
+                                                                            className={cx('lesson-item__quiz-title')}
+                                                                        >
+                                                                            <span
+                                                                                onClick={() =>
+                                                                                    handleFetchGetAllQuestionByQuizId(
+                                                                                        quiz.quizId,
+                                                                                    )
+                                                                                }
+                                                                            >
+                                                                                {quiz.quizName}
+                                                                            </span>
+                                                                        </p>
+                                                                        {/* Show quiz content - Questions and Answers */}
+                                                                        <div
+                                                                            className={cx('lesson-item__quiz-content')}
+                                                                        >
+                                                                            <div className={cx('row')}>
+                                                                                <div className={cx('col-12')}>
+                                                                                    <div
+                                                                                        className={cx('quiz')}
+                                                                                        style={{
+                                                                                            display:
+                                                                                                selectedQuizIdForQuestionAndAnswer ===
+                                                                                                quiz.quizId
+                                                                                                    ? 'block'
+                                                                                                    : 'none',
+                                                                                        }}
+                                                                                    >
+                                                                                        {questions.map((question) => (
+                                                                                            <div
+                                                                                                key={
+                                                                                                    question.questionId
+                                                                                                }
+                                                                                                className={cx(
+                                                                                                    'quiz-wrap',
+                                                                                                )}
+                                                                                            >
+                                                                                                <div
+                                                                                                    className={cx(
+                                                                                                        'quiz-content',
+                                                                                                    )}
+                                                                                                >
+                                                                                                    <p
+                                                                                                        className={cx(
+                                                                                                            'question__title',
+                                                                                                        )}
+                                                                                                    >
+                                                                                                        <strong>
+                                                                                                            Câu hỏi:
+                                                                                                        </strong>{' '}
+                                                                                                        {
+                                                                                                            question.questionContent
+                                                                                                        }
+                                                                                                    </p>
+
+                                                                                                    {answers[
+                                                                                                        question
+                                                                                                            .questionId
+                                                                                                    ] &&
+                                                                                                        answers[
+                                                                                                            question
+                                                                                                                .questionId
+                                                                                                        ].map(
+                                                                                                            (
+                                                                                                                answer,
+                                                                                                            ) => (
+                                                                                                                <div
+                                                                                                                    key={
+                                                                                                                        answer.answerId
+                                                                                                                    }
+                                                                                                                    className={cx(
+                                                                                                                        'question-answer__wrap',
+                                                                                                                        {
+                                                                                                                            'answer-selected':
+                                                                                                                                selectedAnswer &&
+                                                                                                                                selectedAnswer.answerId ===
+                                                                                                                                    answer.answerId,
+                                                                                                                            'answer-true':
+                                                                                                                                selectedAnswer &&
+                                                                                                                                selectedAnswer.answerId ===
+                                                                                                                                    answer.answerId &&
+                                                                                                                                answerStatus ===
+                                                                                                                                    true,
+                                                                                                                            'answer-false':
+                                                                                                                                selectedAnswer &&
+                                                                                                                                selectedAnswer.answerId ===
+                                                                                                                                    answer.answerId &&
+                                                                                                                                answerStatus ===
+                                                                                                                                    false,
+                                                                                                                        },
+                                                                                                                    )}
+                                                                                                                    style={{
+                                                                                                                        backgroundColor:
+                                                                                                                            selectedAnswer &&
+                                                                                                                            selectedAnswer.answerId ===
+                                                                                                                                answer.answerId
+                                                                                                                                ? '#e8f0fe'
+                                                                                                                                : 'transparent',
+                                                                                                                        border:
+                                                                                                                            selectedAnswer &&
+                                                                                                                            selectedAnswer.answerId ===
+                                                                                                                                answer.answerId
+                                                                                                                                ? answerStatus ===
+                                                                                                                                  true
+                                                                                                                                    ? '2px solid green'
+                                                                                                                                    : answerStatus ===
+                                                                                                                                      false
+                                                                                                                                    ? '2px solid red'
+                                                                                                                                    : 'none'
+                                                                                                                                : 'none',
+                                                                                                                    }}
+                                                                                                                    onClick={() =>
+                                                                                                                        handleSelectAnswer(
+                                                                                                                            answer.answerId,
+                                                                                                                            question.questionId,
+                                                                                                                        )
+                                                                                                                    }
+                                                                                                                >
+                                                                                                                    <p
+                                                                                                                        className={cx(
+                                                                                                                            'answer__title',
+                                                                                                                        )}
+                                                                                                                    >
+                                                                                                                        {
+                                                                                                                            answer.contentFor
+                                                                                                                        }
+                                                                                                                    </p>
+                                                                                                                </div>
+                                                                                                            ),
+                                                                                                        )}
+
+                                                                                                    <div
+                                                                                                        className={cx(
+                                                                                                            'answer-wrap__button',
+                                                                                                        )}
+                                                                                                    >
+                                                                                                        <Button
+                                                                                                            outline
+                                                                                                            onClick={
+                                                                                                                handleToggleQuizCancel
+                                                                                                            }
+                                                                                                            className={cx(
+                                                                                                                'answer-wrap__button-cancel',
+                                                                                                            )}
+                                                                                                        >
+                                                                                                            Hủy
+                                                                                                        </Button>
+                                                                                                        <Button
+                                                                                                            primary
+                                                                                                            onClick={
+                                                                                                                handleAnswerClick
+                                                                                                            }
+                                                                                                            className={cx(
+                                                                                                                'answer-wrap__button-answer',
+                                                                                                            )}
+                                                                                                        >
+                                                                                                            Trả lời
+                                                                                                        </Button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        ))}
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </span>
+                                                                ))}
+                                                            </div>
                                                         </span>
                                                     ))}
                                                 </div>
@@ -600,8 +1271,8 @@ const CourseInProgress = () => {
                                         <textarea
                                             placeholder="Đặt câu hỏi"
                                             className={cx('discuss-input__user-input__text')}
-                                            name={'askContent'}
-                                            value={userAskInput.askContent}
+                                            name={'contentFor'}
+                                            value={userAskInput.contentFor}
                                             onChange={handleUserAskInputChange}
                                         ></textarea>
                                         <label className={cx('custom-file-upload')}>
@@ -633,7 +1304,7 @@ const CourseInProgress = () => {
                                             </div>
                                         )}
                                         <div className={cx('discuss-input__button')}>
-                                            {(userAskInput.askContent !== '' && (
+                                            {(userAskInput.contentFor !== '' && (
                                                 <>
                                                     <Button
                                                         primary
@@ -673,7 +1344,7 @@ const CourseInProgress = () => {
                                                         </Button>
                                                     </>
                                                 )) ||
-                                                (userAskInput.askContent !== '' && selectedAskImage !== null && (
+                                                (userAskInput.contentFor !== '' && selectedAskImage !== null && (
                                                     <>
                                                         <Button
                                                             primary
@@ -715,9 +1386,9 @@ const CourseInProgress = () => {
                                                             className={cx('discuss-ask-content__image')}
                                                         />
                                                     )}
-                                                    {ask.askContent && (
+                                                    {ask.contentFor && (
                                                         <p className={cx('discuss-ask-content__detail')}>
-                                                            {ask.askContent}
+                                                            {ask.contentFor}
                                                         </p>
                                                     )}
                                                 </div>
@@ -732,7 +1403,12 @@ const CourseInProgress = () => {
                                                     </span>
                                                     <span
                                                         className={cx('discuss-ask__reply-content-details')}
-                                                        onClick={() => handleFetchRepliesByAskId(ask.askId)}
+                                                        onClick={() =>
+                                                            handleFetchRepliesByAskId(
+                                                                discussDetails.discussId,
+                                                                ask.askId,
+                                                            )
+                                                        }
                                                     >
                                                         Xem câu trả lời
                                                     </span>
@@ -831,8 +1507,8 @@ const CourseInProgress = () => {
                                                         <textarea
                                                             placeholder="Chỉnh sửa"
                                                             className={cx('discuss-input__user-input__text')}
-                                                            name="askContent"
-                                                            value={userUpdateAskInput.askContent}
+                                                            name="contentFor"
+                                                            value={userUpdateAskInput.contentFor}
                                                             onChange={handleUpdateInputChange}
                                                         ></textarea>
                                                         <label className={cx('custom-file-upload')}>
@@ -958,8 +1634,8 @@ const CourseInProgress = () => {
                                         </div>
 
                                         {/* Replies */}
-                                        <form onSubmit={(e) => handleSubmitReplyInput(e, ask.askId)}>
-                                            <div className={cx('discuss-reply')}>
+                                        <div className={cx('discuss-reply')}>
+                                            <form onSubmit={(e) => handleSubmitReplyInput(e, ask.askId)}>
                                                 <div
                                                     className={cx('discuss-reply__input-wrap')}
                                                     style={{
@@ -970,8 +1646,8 @@ const CourseInProgress = () => {
                                                     <textarea
                                                         placeholder="Trả lời"
                                                         className={cx('discuss-input__user-input__text')}
-                                                        name={'replyContent'}
-                                                        value={userReplyInput.replyContent}
+                                                        name={'contentFor'}
+                                                        value={userReplyInput.contentFor}
                                                         onChange={(e) => handleUserReplyInputChange(e, ask.askId)}
                                                     ></textarea>
                                                     <label className={cx('custom-file-upload')}>
@@ -1002,7 +1678,7 @@ const CourseInProgress = () => {
                                                         </div>
                                                     )}
                                                     <div className={cx('discuss-input__button')}>
-                                                        {(userReplyInput.replyContent !== '' && (
+                                                        {(userReplyInput.contentFor !== '' && (
                                                             <>
                                                                 <Button
                                                                     primary
@@ -1042,7 +1718,7 @@ const CourseInProgress = () => {
                                                                     </Button>
                                                                 </>
                                                             )) ||
-                                                            (userReplyInput.replyContent !== '' &&
+                                                            (userReplyInput.contentFor !== '' &&
                                                                 selectedReplyImage !== null && (
                                                                     <>
                                                                         <Button
@@ -1069,61 +1745,325 @@ const CourseInProgress = () => {
                                                                 ))}
                                                     </div>
                                                 </div>
+                                            </form>
+                                            {/* User reply */}
+                                            {selectedAskId === ask.askId &&
+                                                replies &&
+                                                replies.length > 0 &&
+                                                replies.map((ask) => (
+                                                    <div key={ask.askId} className={cx('discuss-reply__content-wrap')}>
+                                                        {/* User reply details */}
+                                                        <div className={cx('discuss-reply__image')}>
+                                                            <Image src={ask.avatar} className={cx('user-avatar')} />
+                                                        </div>
+                                                        <div className={cx('discuss-reply__list')}>
+                                                            <span className={cx('user-name')}>{ask.fullName}</span>
+                                                            <div className={cx('discuss-reply__item')}>
+                                                                {ask.image && (
+                                                                    <Image
+                                                                        src={ask.image}
+                                                                        className={cx('discuss-ask-content__image')}
+                                                                    />
+                                                                )}
+                                                                {ask.contentFor && (
+                                                                    <div
+                                                                        className={cx('discuss-reply__content-details')}
+                                                                    >
+                                                                        <div className={cx('discuss-reply__user-tag')}>
+                                                                            <span
+                                                                                className={cx('discuss-reply__content')}
+                                                                            >
+                                                                                {ask.contentFor}
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
 
-                                                {/* User reply */}
-                                                {selectedAskId === ask.askId &&
-                                                    replies &&
-                                                    replies.length > 0 &&
-                                                    replies.map((reply) => (
-                                                        <div
-                                                            key={reply.replyId}
-                                                            className={cx('discuss-reply__content-wrap')}
-                                                        >
-                                                            {/* User reply details */}
-                                                            <div className={cx('discuss-reply__image')}>
-                                                                <Image
-                                                                    src={reply.avatar}
-                                                                    className={cx('user-avatar')}
-                                                                />
-                                                            </div>
-                                                            <div className={cx('discuss-reply__list')}>
-                                                                <span className={cx('user-name')}>
-                                                                    {reply.fullName}
-                                                                </span>
-                                                                <div className={cx('discuss-reply__item')}>
-                                                                    {reply.image && (
-                                                                        <Image
-                                                                            src={reply.image}
-                                                                            className={cx('discuss-ask-content__image')}
-                                                                        />
+                                                                {/* Reply, view all answers, actions */}
+                                                                <div
+                                                                    className={cx(
+                                                                        'discuss-ask__reply-title-details-wrap',
                                                                     )}
-                                                                    {reply.replyContent && (
+                                                                >
+                                                                    {/* Icon open reply actions */}
+                                                                    <span className={cx('discuss-reply__reply-title')}>
+                                                                        Tùy chọn
+                                                                    </span>
+                                                                    <span
+                                                                        className={cx('discuss-reply__reply-actions')}
+                                                                        onClick={() =>
+                                                                            handleToggleReplyActions(ask.askId)
+                                                                        }
+                                                                    >
+                                                                        <FontAwesomeIcon icon={faEllipsis} />
+                                                                    </span>
+                                                                    <div
+                                                                        className={cx(
+                                                                            'discuss-ask__reply-actions-details',
+                                                                        )}
+                                                                        style={{
+                                                                            display:
+                                                                                selectedReplyIdForActions === ask.askId
+                                                                                    ? 'block'
+                                                                                    : 'none',
+                                                                        }}
+                                                                    >
+                                                                        {/* Reply - Actions */}
                                                                         <div
                                                                             className={cx(
-                                                                                'discuss-reply__content-details',
+                                                                                'discuss-ask__reply-actions-details-content',
                                                                             )}
                                                                         >
                                                                             <div
                                                                                 className={cx(
-                                                                                    'discuss-reply__user-tag',
+                                                                                    'discuss-ask__reply-actions-details-icon-wrap',
                                                                                 )}
                                                                             >
                                                                                 <span
                                                                                     className={cx(
-                                                                                        'discuss-reply__content',
+                                                                                        'discuss-ask__reply-actions-details-icon',
                                                                                     )}
                                                                                 >
-                                                                                    {reply.replyContent}
+                                                                                    <FontAwesomeIcon icon={faPen} />
+                                                                                </span>
+                                                                                <span
+                                                                                    className={cx(
+                                                                                        'discuss-ask__reply-actions-details-title',
+                                                                                    )}
+                                                                                    onClick={() =>
+                                                                                        handleToggleReplyActionEdit(
+                                                                                            ask.askId,
+                                                                                            ask.replyForAskId,
+                                                                                        )
+                                                                                    }
+                                                                                >
+                                                                                    Chỉnh sửa
+                                                                                </span>
+                                                                            </div>
+
+                                                                            <div
+                                                                                className={cx(
+                                                                                    'discuss-ask__reply-actions-details-icon-wrap',
+                                                                                )}
+                                                                            >
+                                                                                <span
+                                                                                    className={cx(
+                                                                                        'discuss-ask__reply-actions-details-icon',
+                                                                                    )}
+                                                                                >
+                                                                                    <FontAwesomeIcon icon={faTrash} />
+                                                                                </span>
+                                                                                <span
+                                                                                    className={cx(
+                                                                                        'discuss-ask__reply-actions-details-title',
+                                                                                    )}
+                                                                                    onClick={() =>
+                                                                                        handleToggleReplyActionDelete(
+                                                                                            ask.askId,
+                                                                                            ask.replyForAskId,
+                                                                                        )
+                                                                                    }
+                                                                                >
+                                                                                    Xóa
                                                                                 </span>
                                                                             </div>
                                                                         </div>
-                                                                    )}
+                                                                    </div>
                                                                 </div>
+                                                                {/* Reply - Update */}
+                                                                <form onSubmit={handleUpdateReply}>
+                                                                    <div
+                                                                        className={cx('discuss-ask__actions-edit')}
+                                                                        style={{
+                                                                            display:
+                                                                                selectedReplyIdForActionEdit ===
+                                                                                ask.askId
+                                                                                    ? 'block'
+                                                                                    : 'none',
+                                                                        }}
+                                                                    >
+                                                                        <Image
+                                                                            src={userDetails.image}
+                                                                            className={cx('user-avatar')}
+                                                                        />
+                                                                        <textarea
+                                                                            placeholder="Chỉnh sửa"
+                                                                            className={cx(
+                                                                                'discuss-input__user-input__text',
+                                                                            )}
+                                                                            name="contentFor"
+                                                                            value={userUpdateReplyInput.contentFor}
+                                                                            onChange={handleUpdateReplyInputChange}
+                                                                        ></textarea>
+                                                                        <label className={cx('custom-file-upload')}>
+                                                                            <input
+                                                                                id="replyImageInput"
+                                                                                type="file"
+                                                                                accept="image/*"
+                                                                                name="image"
+                                                                                onChange={handleUpdateReplyInputChange}
+                                                                            />
+                                                                            <FontAwesomeIcon icon={faImage} />
+                                                                        </label>
+                                                                        {/* Curent image */}
+                                                                        {replyDetails.image && (
+                                                                            <div>
+                                                                                <div
+                                                                                    className={cx(
+                                                                                        'image-preview__icon-wrap',
+                                                                                    )}
+                                                                                >
+                                                                                    <button
+                                                                                        onClick={
+                                                                                            handleRemoveAskUpdateImage
+                                                                                        }
+                                                                                    >
+                                                                                        <FontAwesomeIcon
+                                                                                            icon={faX}
+                                                                                            className={cx(
+                                                                                                'image-preview__icon',
+                                                                                            )}
+                                                                                        />
+                                                                                    </button>
+                                                                                </div>
+                                                                                <Image
+                                                                                    src={replyDetails.image}
+                                                                                    alt="Preview"
+                                                                                    className={cx('image-preview')}
+                                                                                />
+                                                                            </div>
+                                                                        )}
+
+                                                                        {/* Preview */}
+                                                                        {selectedReplyUpdateImage && (
+                                                                            <div>
+                                                                                <div
+                                                                                    className={cx(
+                                                                                        'image-preview__icon-wrap',
+                                                                                    )}
+                                                                                >
+                                                                                    <button
+                                                                                        onClick={
+                                                                                            handleRemoveAskUpdateImage
+                                                                                        }
+                                                                                    >
+                                                                                        <FontAwesomeIcon
+                                                                                            icon={faX}
+                                                                                            className={cx(
+                                                                                                'image-preview__icon',
+                                                                                            )}
+                                                                                        />
+                                                                                    </button>
+                                                                                </div>
+                                                                                <Image
+                                                                                    src={selectedReplyUpdateImage}
+                                                                                    alt="Preview"
+                                                                                    className={cx('image-preview')}
+                                                                                />
+                                                                            </div>
+                                                                        )}
+                                                                        <div className={cx('discuss-input__button')}>
+                                                                            <Button
+                                                                                primary
+                                                                                small
+                                                                                type="submit"
+                                                                                className={cx(
+                                                                                    'discuss-input__button-edit',
+                                                                                )}
+                                                                            >
+                                                                                Lưu
+                                                                            </Button>
+                                                                            <Button
+                                                                                outline
+                                                                                small
+                                                                                onClick={() =>
+                                                                                    handleToggleReplyActionEdit(
+                                                                                        ask.askId,
+                                                                                        ask.replyForAskId,
+                                                                                    )
+                                                                                }
+                                                                                className={cx(
+                                                                                    'discuss-input__button-cancel',
+                                                                                )}
+                                                                            >
+                                                                                Hủy
+                                                                            </Button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                {/* Reply - Delete */}
+                                                                <div className={cx('discuss-ask__actions-delete')}>
+                                                                    <div className={cx('row')}>
+                                                                        <div className={cx('col-12')}>
+                                                                            <div
+                                                                                className={cx('delete')}
+                                                                                style={{
+                                                                                    display:
+                                                                                        selectedReplyIdForActionDelete ===
+                                                                                        ask.askId
+                                                                                            ? 'block'
+                                                                                            : 'none',
+                                                                                }}
+                                                                            >
+                                                                                <div className={cx('delete-wrap')}>
+                                                                                    <div
+                                                                                        className={cx('delete-content')}
+                                                                                    >
+                                                                                        <Image
+                                                                                            src={
+                                                                                                'https://static.vecteezy.com/system/resources/previews/016/964/110/non_2x/eps10-red-garbage-or-trash-can-solid-icon-or-logo-isolated-on-white-background-delete-or-rubbish-basket-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg'
+                                                                                            }
+                                                                                            className={cx(
+                                                                                                'delete-content__image',
+                                                                                            )}
+                                                                                        />
+                                                                                        <p
+                                                                                            className={cx(
+                                                                                                'delete-content__title',
+                                                                                            )}
+                                                                                        >
+                                                                                            Xác nhận xóa bình luận này?
+                                                                                        </p>
+                                                                                        <div
+                                                                                            className={cx(
+                                                                                                'delete-wrap__button',
+                                                                                            )}
+                                                                                        >
+                                                                                            <Button
+                                                                                                primary
+                                                                                                onClick={
+                                                                                                    handleDeleteReplyByReplyId
+                                                                                                }
+                                                                                                className={cx(
+                                                                                                    'delete-wrap__button-delete',
+                                                                                                )}
+                                                                                            >
+                                                                                                Xóa
+                                                                                            </Button>
+                                                                                            <Button
+                                                                                                outline
+                                                                                                onClick={
+                                                                                                    handleToggleReplyActionDeleteCancel
+                                                                                                }
+                                                                                                className={cx(
+                                                                                                    'delete-wrap__button-cancel',
+                                                                                                )}
+                                                                                            >
+                                                                                                Hủy
+                                                                                            </Button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                {/* End Reply, view all answers, actions */}
                                                             </div>
                                                         </div>
-                                                    ))}
-                                            </div>
-                                        </form>
+                                                    </div>
+                                                ))}
+                                        </div>
                                     </div>
                                 ))}
                                 {/* End asks and replies */}
@@ -1143,73 +2083,154 @@ const CourseInProgress = () => {
                                 <div className={cx('note-heading')}>
                                     <span className={cx('note-heading__title')}>Thêm ghi chú</span>
                                 </div>
-                                <div className={cx('note-content')}>
-                                    <input
-                                        type="text"
-                                        placeholder="Nội dung ghi chú"
-                                        className={cx('note-content__input')}
-                                    />
-                                </div>
+
+                                <form onSubmit={handleSubmitNoteInput}>
+                                    <div className={cx('note-content')}>
+                                        <textarea
+                                            type="text"
+                                            placeholder="Nội dung ghi chú"
+                                            className={cx('note-content__input')}
+                                            name={'contentFor'}
+                                            value={userNoteInput.contentFor}
+                                            onChange={handleUserNoteInputChange}
+                                        />
+                                    </div>
+                                    <div className={cx('note-input')}>
+                                        {userNoteInput.contentFor !== '' && (
+                                            <>
+                                                <Button
+                                                    primary
+                                                    small
+                                                    type={'submit'}
+                                                    className={cx('note-input__button-create')}
+                                                >
+                                                    Thêm ghi chú
+                                                </Button>
+                                                <Button
+                                                    outline
+                                                    small
+                                                    onClick={handleNoteCancel}
+                                                    className={cx('note-input__button-cancel')}
+                                                >
+                                                    Hủy
+                                                </Button>
+                                            </>
+                                        )}
+                                    </div>
+                                </form>
+
                                 <div className={cx('note-content-list')}>
                                     <span className={cx('note-content-list__title')}>Danh sách ghi chú</span>
-                                    <div className={cx('note-content-list__wrap')}>
-                                        <br />
-                                        <p className={cx('note-content-list__item')}>
-                                            + OOP là object oriented programming
-                                        </p>
-                                        <div className={cx('note-content-list__item-icon')}>
-                                            <p className={cx('note-content-list__item-icon__edit')}>
-                                                <FontAwesomeIcon icon={faPen} />
-                                            </p>
-                                            <p className={cx('note-content-list__item-icon__delete')}>
-                                                <FontAwesomeIcon icon={faTrash} />
-                                            </p>
-                                        </div>
-                                    </div>
+                                    {notes.map((note) => (
+                                        <div key={note.noteId} className={cx('note-content-list__wrap')}>
+                                            <br />
+                                            <p className={cx('note-content-list__item')}>{note.contentFor}</p>
+                                            <div className={cx('note-content-list__item-icon')}>
+                                                <p
+                                                    className={cx('note-content-list__item-icon__edit')}
+                                                    onClick={() => handleToggleNoteActionEdit(note.noteId)}
+                                                >
+                                                    <FontAwesomeIcon icon={faPen} />
+                                                </p>
+                                                <p
+                                                    className={cx('note-content-list__item-icon__delete')}
+                                                    onClick={() => handleToggleNoteActionDelete(note.noteId)}
+                                                >
+                                                    <FontAwesomeIcon icon={faTrash} />
+                                                </p>
+                                            </div>
 
-                                    <div className={cx('note-content-list__wrap')}>
-                                        <br />
-                                        <p className={cx('note-content-list__item')}>+ HTML là ngôn ngữ đánh dấu</p>
-                                        <div className={cx('note-content-list__item-icon')}>
-                                            <p className={cx('note-content-list__item-icon__edit')}>
-                                                <FontAwesomeIcon icon={faPen} />
-                                            </p>
-                                            <p className={cx('note-content-list__item-icon__delete')}>
-                                                <FontAwesomeIcon icon={faTrash} />
-                                            </p>
-                                        </div>
-                                    </div>
+                                            {/* Note actions */}
+                                            {/* Note - Update */}
+                                            <form onSubmit={handleUpdateNote}>
+                                                <div
+                                                    className={cx('note__actions-edit')}
+                                                    style={{
+                                                        display:
+                                                            selectedNoteIdForActionEdit === note.noteId
+                                                                ? 'block'
+                                                                : 'none',
+                                                    }}
+                                                >
+                                                    <textarea
+                                                        placeholder="Chỉnh sửa"
+                                                        className={cx('discuss-input__user-input__text')}
+                                                        name="contentFor"
+                                                        value={userUpdateNoteInput.contentFor}
+                                                        onChange={handleUpdateNoteInputChange}
+                                                    ></textarea>
 
-                                    <div className={cx('note-content-list__wrap')}>
-                                        <br />
-                                        <p className={cx('note-content-list__item')}>
-                                            + id là duy nhất, nên dùng class trong css
-                                        </p>
-                                        <div className={cx('note-content-list__item-icon')}>
-                                            <p className={cx('note-content-list__item-icon__edit')}>
-                                                <FontAwesomeIcon icon={faPen} />
-                                            </p>
-                                            <p className={cx('note-content-list__item-icon__delete')}>
-                                                <FontAwesomeIcon icon={faTrash} />
-                                            </p>
+                                                    {userUpdateNoteInput.contentFor !== '' && (
+                                                        <div className={cx('discuss-input__button')}>
+                                                            <Button
+                                                                primary
+                                                                small
+                                                                type="submit"
+                                                                className={cx('discuss-input__button-edit')}
+                                                            >
+                                                                Lưu
+                                                            </Button>
+                                                            <Button
+                                                                outline
+                                                                small
+                                                                onClick={() => handleToggleNoteActionEdit(note.noteId)}
+                                                                className={cx('discuss-input__button-cancel')}
+                                                            >
+                                                                Hủy
+                                                            </Button>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </form>
+                                            {/* Note - Delete */}
+                                            <div className={cx('discuss-ask__actions-delete')}>
+                                                <div className={cx('row')}>
+                                                    <div className={cx('col-12')}>
+                                                        <div
+                                                            className={cx('delete')}
+                                                            style={{
+                                                                display:
+                                                                    selectedNoteIdForActionDelete === note.noteId
+                                                                        ? 'block'
+                                                                        : 'none',
+                                                            }}
+                                                        >
+                                                            <div className={cx('delete-wrap')}>
+                                                                <div className={cx('delete-content')}>
+                                                                    <Image
+                                                                        src={
+                                                                            'https://static.vecteezy.com/system/resources/previews/016/964/110/non_2x/eps10-red-garbage-or-trash-can-solid-icon-or-logo-isolated-on-white-background-delete-or-rubbish-basket-symbol-in-a-simple-flat-trendy-modern-style-for-your-website-design-and-mobile-app-vector.jpg'
+                                                                        }
+                                                                        className={cx('delete-content__image')}
+                                                                    />
+                                                                    <p className={cx('delete-content__title')}>
+                                                                        Xác nhận xóa ghi chú này?
+                                                                    </p>
+                                                                    <div className={cx('delete-wrap__button')}>
+                                                                        <Button
+                                                                            primary
+                                                                            onClick={handleDeleteNoteByNoteId}
+                                                                            className={cx('delete-wrap__button-delete')}
+                                                                        >
+                                                                            Xóa
+                                                                        </Button>
+                                                                        <Button
+                                                                            outline
+                                                                            onClick={handleToggleNoteActionDeleteCancel}
+                                                                            className={cx('delete-wrap__button-cancel')}
+                                                                        >
+                                                                            Hủy
+                                                                        </Button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* End - Note actions */}
                                         </div>
-                                    </div>
-
-                                    <div className={cx('note-content-list__wrap')}>
-                                        <br />
-                                        <p className={cx('note-content-list__item')}>
-                                            + Sử dụng scss module giúp không bị trùng Css và khi xóa đi theo component
-                                            không gây thừa CSS
-                                        </p>
-                                        <div className={cx('note-content-list__item-icon')}>
-                                            <p className={cx('note-content-list__item-icon__edit')}>
-                                                <FontAwesomeIcon icon={faPen} />
-                                            </p>
-                                            <p className={cx('note-content-list__item-icon__delete')}>
-                                                <FontAwesomeIcon icon={faTrash} />
-                                            </p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

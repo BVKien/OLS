@@ -19,7 +19,7 @@ namespace DataAccess.Dao.ModelDao
         }
 
         // get discussion by lesson id 
-        public DiscussReadDtoForCustomer GetDiscussionDetail(int discussId, int lessonId)
+        public DiscussReadDtoForCustomer GetDiscussionDetail(int lessonId)
         {
             DiscussReadDtoForCustomer dcDetail = new DiscussReadDtoForCustomer();
             try
@@ -28,7 +28,7 @@ namespace DataAccess.Dao.ModelDao
                 {
                     var dc = context.Discusses
                         .Include(d => d.LessonLesson)
-                        .FirstOrDefault(d => d.DiscussId == discussId && d.LessonLessonId == lessonId);
+                        .FirstOrDefault(d => d.LessonLessonId == lessonId);
                     dcDetail = _mapper.Map<DiscussReadDtoForCustomer>(dc);
                 }
             }

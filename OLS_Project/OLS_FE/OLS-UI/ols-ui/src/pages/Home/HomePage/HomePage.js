@@ -22,7 +22,7 @@ const HomePage = () => {
                     <div className={'col-12'}>
                         {/* <CoursesHaveFee /> */}
                         <CoursesFree />
-                        <NewestBlogs />
+                        {/* <NewestBlogs /> */}
                         {/* <LearningPaths /> */}
                     </div>
                 </div>

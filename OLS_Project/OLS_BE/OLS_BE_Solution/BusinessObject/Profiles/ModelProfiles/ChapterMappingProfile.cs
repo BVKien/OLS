@@ -19,6 +19,8 @@ namespace BusinessObject.Profiles.ModelProfiles
                 .ForMember(dest => dest.CourseName, opt => opt.MapFrom(src => src.CourseCourse.CourseName))
                 .ReverseMap();
 
+            CreateMap<Chapter, ChapterReadDtoForCustomer>().ReverseMap();
+
             // == admin == 
             CreateMap<Chapter, ChapterReadDtoForAdmin>().ReverseMap();
             CreateMap<Chapter, ChapterCreateDtoForAdmin>().ReverseMap();

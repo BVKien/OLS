@@ -1,13 +1,7 @@
 ﻿using AutoMapper;
-using BusinessObject.Dtos.BlogDtos;
 using BusinessObject.Dtos.UserDtos;
 using BusinessObject.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Dao.ModelDao
 {
@@ -34,7 +28,7 @@ namespace DataAccess.Dao.ModelDao
 
                     if (user == null)
                     {
-                        throw new Exception("User not found.");
+                        throw new Exception("Invalid email or password.");
                     }
 
                     return user;

@@ -28,6 +28,76 @@ namespace OLSWebAPI.Controllers.CustomerControllers
             }
         }
 
+        [HttpGet("get_all_reply_of_asker_in_discussion/{discuss_id}/{ask_id}")]
+        public ActionResult<IEnumerable<AskAndReplyReadDtoForCustomer>> GetAllReplyOfAskerInDiscussion(int discuss_id, int ask_id)
+        {
+            try
+            {
+                var list = _repo.GetAllReplyByDiscussIdAndAskId(discuss_id, ask_id);
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("count_all_reply_of_asker_in_discussion/{discuss_id}/{ask_id}")]
+        public IActionResult CountAllReplyOfAskerInDiscussion(int discuss_id, int ask_id)
+        {
+            try
+            {
+                var quantity = _repo.CountAllReplyByDiscussIdAndAskId(discuss_id, ask_id);
+                return Ok(quantity);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        //[HttpGet("get_ask_or_reply_detail/{ask_id}/{reply_for_ask_id}/{discuss_id}")]
+        //public IActionResult GetAskOrReplyDetail(int ask_id, int reply_for_ask_id, int discuss_id)
+        //{
+        //    try
+        //    {
+        //        var arDetail = _repo.GetAskOrReplyDetail(ask_id, reply_for_ask_id, discuss_id);
+        //        return Ok(arDetail);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(ex.Message);
+        //    }
+        //}
+
+        [HttpGet("get_ask_detail/{ask_id}/{discuss_id}")]
+        public IActionResult GetAskOrReplyDetail(int ask_id, int discuss_id)
+        {
+            try
+            {
+                var arDetail = _repo.GetAskDetail(ask_id, discuss_id);
+                return Ok(arDetail);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("get_reply_detail/{ask_id}/{discuss_id}")]
+        public IActionResult GetReplyDetail(int ask_id, int discuss_id)
+        {
+            try
+            {
+                var arDetail = _repo.GetReplyDetail(ask_id, discuss_id);
+                return Ok(arDetail);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("create_ask_or_reply")]
         public IActionResult CreateAskOrReply(AskAndReplyCreateDtoForCustomer ar)
         {

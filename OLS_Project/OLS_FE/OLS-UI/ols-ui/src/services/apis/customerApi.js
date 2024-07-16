@@ -9,22 +9,27 @@ const user = {
 // chapter
 const chapter = {
     get_all_chapter_in_course: base.url + '/api/customer/chapter/get_all_chapter_in_course' /*/{course_id} */,
+    get_chapter_detail: base.url + '/api/customer/chapter/get_chapter_detail' /*/{chapter_id} */,
 };
 
 // course
 const course = {
     get_all_free_course: base.url + '/api/customer/course/get_all_free_course',
     get_course_detail: base.url + '/api/customer/course/get_course_detail' /*/{course_id} */,
+    get_all_course_in_learning_path:
+        base.url + '/api/customer/course/get_all_course_in_learning_path' /*/{learning_path_id} */,
 };
 
 // course enrolled - register course
 const courseEnrolled = {
     register_free_course: base.url + '/api/customer/course_enrolled/register_free_course',
+    check_course_register_by_user:
+        base.url + '/api/customer/course_enrolled/check_course_register_by_user' /*/{course_id}/{user_id} */,
 };
 
 // discuss - discussion
 const discuss = {
-    get_discussion_detail: base.url + '/api/customer/discuss/get_discussion_detail' /*/{discuss_id}/{lesson_id} */,
+    get_discussion_detail: base.url + '/api/customer/discuss/get_discussion_detail' /*/{lesson_id} */,
 };
 
 // feedback
@@ -45,6 +50,7 @@ const learningPath = {
 // lesson
 const lesson = {
     get_all_lesson_in_chapter: base.url + '/api/customer/lesson/get_all_lesson_in_chapter' /*/{chapter_id} */,
+    get_lesson_detail: base.url + '/api/customer/lesson/get_lesson_detail' /*/{lesson_id} */,
 };
 
 // note
@@ -70,7 +76,7 @@ const question = {
 
 // quiz
 const quiz = {
-    get_all_quiz_in_lesson: base.urll + '/api/customer/quiz/get_all_quiz_in_lesson' /*/{lesson_id} */,
+    get_all_quiz_in_lesson: base.url + '/api/customer/quiz/get_all_quiz_in_lesson' /*/{lesson_id} */,
     get_quiz_detail_in_lesson: base.url + '/api/customer/quiz/get_quiz_detail_in_lesson' /*/{quiz_id}/{lesson_id} */,
 };
 
@@ -83,7 +89,19 @@ const answer = {
 
 // conversation - ask and reply
 const conversation = {
-    get_all_answer_of_question: base.url + '/api/customer/answer/get_all_answer_of_question' /*/{question_id}*/,
+    get_all_conversation_in_discussion:
+        base.url + '/api/customer/conversation/get_all_conversation_in_discussion' /*/{discuss_id} */,
+    get_all_reply_of_asker_in_discussion:
+        base.url + '/api/customer/conversation/get_all_reply_of_asker_in_discussion' /*/{discuss_id}/{ask_id} */,
+    count_all_reply_of_asker_in_discussion:
+        base.url + '/api/customer/conversation/count_all_reply_of_asker_in_discussion' /*/{discuss_id}/{ask_id} */,
+    /*
+    get_ask_or_reply_detail:
+        base.url + '/api/customer/conversation/get_ask_or_reply_detail' /{ask_id}/{reply_for_ask_id}/{discuss_id},
+    */
+    get_ask_detail: base.url + '/api/customer/conversation/get_ask_detail' /*/{ask_id}/{discuss_id}*/,
+    get_reply_detail:
+        base.url + '/api/customer/conversation/get_reply_detail' /*/{ask_id}/{reply_for_ask_id}/{discuss_id}*/,
     create_ask_or_reply: base.url + '/api/customer/conversation/create_ask_or_reply',
     update_ask_or_reply:
         base.url + '/api/customer/conversation/update_ask_or_reply' /*/{ar_id}/{user_id}/{discuss_id}*/,

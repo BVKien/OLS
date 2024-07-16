@@ -13,6 +13,9 @@ import Button from '~/components/Button';
 import config from '~/config';
 import { saveUserToLocalStorage } from '~/utils/auth';
 
+// auth api
+import authApi from '~/services/apis/authApi';
+
 const cx = classNames.bind(styles);
 
 const Login = () => {
@@ -38,7 +41,7 @@ const Login = () => {
                     return;
                 }
             }
-            const response = await axios.post('https://localhost:7158/api/User/loginbyemail', { email, password });
+            const response = await axios.post(authApi.auth.login, { email, password });
 
             if (response.data.message) {
                 saveUserToLocalStorage(response.data.user, 3600);

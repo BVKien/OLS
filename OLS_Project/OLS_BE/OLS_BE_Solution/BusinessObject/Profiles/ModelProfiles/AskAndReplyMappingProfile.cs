@@ -15,7 +15,8 @@ namespace BusinessObject.Profiles.ModelProfiles
         {
             // dest => src 
             CreateMap<AskAndReply, AskAndReplyReadDtoForCustomer>()
-                .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.UserUser.FullName))
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.UserUser.FullName))
+                .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.UserUser.Image))
                 .ReverseMap();
             CreateMap<AskAndReply, AskAndReplyCreateDtoForCustomer>().ReverseMap();
             CreateMap<AskAndReply, AskAndReplyUpdateDtoForCustomer>().ReverseMap();

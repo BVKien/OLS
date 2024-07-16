@@ -17,6 +17,9 @@ namespace Repository.Services.Implements.ModelImplements
         {
             _courseEnrolledDao = courseEnrolledDao;
         }
+
+        public bool IsCourseRegisterByUser(int courseId, int userId)
+            => _courseEnrolledDao.IsCourseRegisterByUser(courseId, userId);
         public void CreateCourseEnrolled(CourseEnrolledCreateDtoForCustomer ceInfo)
             => _courseEnrolledDao.CreateCourseEnrolled(ceInfo);
     }

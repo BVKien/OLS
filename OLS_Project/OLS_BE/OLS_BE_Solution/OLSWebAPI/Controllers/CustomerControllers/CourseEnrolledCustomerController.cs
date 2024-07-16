@@ -14,6 +14,20 @@ namespace OLSWebAPI.Controllers.CustomerControllers
             _repo = repo;
         }
 
+        [HttpGet("check_course_register_by_user/{course_id}/{user_id}")]
+        public IActionResult CheckCourseRegiterByUser(int course_id, int user_id)
+        {
+            try
+            {
+                var check = _repo.IsCourseRegisterByUser(course_id, user_id);
+                return Ok(check);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("register_free_course")]
         public IActionResult RegisterFreeCourse(CourseEnrolledCreateDtoForCustomer ceInfo)
         {

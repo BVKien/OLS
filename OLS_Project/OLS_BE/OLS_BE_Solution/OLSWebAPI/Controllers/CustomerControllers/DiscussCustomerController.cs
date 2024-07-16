@@ -14,12 +14,12 @@ namespace OLSWebAPI.Controllers.CustomerControllers
             _repo = repo;
         }
 
-        [HttpGet("get_discussion_detail/{discuss_id}/{lesson_id}")]
-        public ActionResult<IEnumerable<DiscussReadDtoForCustomer>> GetDiscussionDetail(int discuss_id, int lesson_id)
+        [HttpGet("get_discussion_detail/{lesson_id}")]
+        public ActionResult<IEnumerable<DiscussReadDtoForCustomer>> GetDiscussionDetail(int lesson_id)
         {
             try
             {
-                var dc = _repo.GetDiscussionDetail(discuss_id, lesson_id);
+                var dc = _repo.GetDiscussionDetail(lesson_id);
                 return Ok(dc);
             }
             catch (Exception ex)

@@ -8,6 +8,7 @@ namespace BusinessObject.Dtos.LessonDtos
 {
     public class LessonReadDtoForCustomer
     {
+        public int LessonId { get; set; }
         public string? Title { get; set; }
         public string? Video { get; set; }
         public TimeSpan? Time { get; set; }

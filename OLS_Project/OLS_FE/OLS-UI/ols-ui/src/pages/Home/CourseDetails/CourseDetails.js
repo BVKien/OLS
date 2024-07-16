@@ -9,8 +9,12 @@ import styles from './CourseDetails.module.scss';
 import Button from '~/components/Button';
 import config from '~/config';
 
+// customer api
+import customerApi from '~/services/apis/customerApi';
+
 const cx = classNames.bind(styles);
 
+var userId = 46;
 const CourseDetails = () => {
     const [courseDetails, setCourseDetails] = useState(null);
     const [chapters, setChapters] = useState([]);
@@ -24,12 +28,12 @@ const CourseDetails = () => {
                 const courseId = urlParams.get('courseId');
 
                 // Fetching course details using the provided API
-                const responseCourseDetails = await axios.get(
-                    `https://localhost:7158/getCourseByCourseId_Home/${courseId}`,
-                );
+                const responseCourseDetails = await axios.get(customerApi.course.get_course_detail + '/' + courseId);
                 setCourseDetails(responseCourseDetails.data);
 
-                const responseChapters = await axios.get(`https://localhost:7158/getAllChaptersByCourseId/${courseId}`);
+                const responseChapters = await axios.get(
+                    customerApi.chapter.get_all_chapter_in_course + '/' + courseId,
+                );
                 setChapters(responseChapters.data);
             } catch (error) {
                 console.error('Error fetching course details:', error);
@@ -66,11 +70,11 @@ const CourseDetails = () => {
             // Check if the course fee is zero
             if (courseDetails.fee === 0) {
                 // Perform API call to register free course
-                const response = await axios.post('https://localhost:7158/registerFreeCourse', {
+                const response = await axios.post(customerApi.courseEnrolled.register_free_course, {
                     enrolledDate: new Date().toISOString(),
                     status: 1,
                     courseCourseId: courseId,
-                    userUserId: 2, // user id lấy của user hiện đang đăng nhập - chưa có login -> chưa có
+                    userUserId: userId,
                 });
 
                 // Handle the response as needed
