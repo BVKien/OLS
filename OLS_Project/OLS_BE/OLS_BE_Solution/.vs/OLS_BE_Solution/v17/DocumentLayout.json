@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\final\\ols\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\controllers\\uploadimg\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\controllers\\uploadimg\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\final\\ols\\ols_project\\ols_be\\ols_be_solution\\businessobject\\profiles\\modelprofiles\\askandreplymappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\askandreplymappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\final\\ols\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\uploads\\7af1d3ba-e6e9-45ba-a5d6-d20a977815c4_online-learning-icon-studying-at-home-vector-on-isolated-white-background-eps-10-2d10ex1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\uploads\\7af1d3ba-e6e9-45ba-a5d6-d20a977815c4_online-learning-icon-studying-at-home-vector-on-isolated-white-background-eps-10-2d10ex1.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\final\\ols\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\controllers\\uploadimg\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\controllers\\uploadimg\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\final\\ols\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 184,
-          "SelectedChildIndex": 64,
+          "SelectedChildIndex": 63,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AskAndReply.cs",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Models\\AskAndReply.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Models\\AskAndReply.cs",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "3029848.png - PNG [512x512, 32 bit, PNG]",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\uploads\\3029848.png",
               "RelativeDocumentMoniker": "OLSWebAPI\\uploads\\3029848.png",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "a12535a1-e485-475c-8d24-0f39a0078289_3029848.png - PNG [512x512, 32 bit, PNG]",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\uploads\\a12535a1-e485-475c-8d24-0f39a0078289_3029848.png",
               "RelativeDocumentMoniker": "OLSWebAPI\\uploads\\a12535a1-e485-475c-8d24-0f39a0078289_3029848.png",
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "7af1d3ba-e6e9-45ba-a5d6-d20a977815c4_online-learning-icon-studying-at-home-vector-on-isolated-white-background-eps-10-2D10EX1.jpg - Bitmap [1300x870, 24 bit, JPG]",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\uploads\\7af1d3ba-e6e9-45ba-a5d6-d20a977815c4_online-learning-icon-studying-at-home-vector-on-isolated-white-background-eps-10-2D10EX1.jpg",
               "RelativeDocumentMoniker": "OLSWebAPI\\uploads\\7af1d3ba-e6e9-45ba-a5d6-d20a977815c4_online-learning-icon-studying-at-home-vector-on-isolated-white-background-eps-10-2D10EX1.jpg",
@@ -119,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AskAndReplyCreateDto.cs",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\AskAndReplyDtos\\AskAndReplyCreateDto.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Dtos\\AskAndReplyDtos\\AskAndReplyCreateDto.cs",
@@ -364,20 +364,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "UploadController.cs",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\UploadImg\\UploadController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\UploadImg\\UploadController.cs",
               "ToolTip": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\UploadImg\\UploadController.cs",
               "RelativeToolTip": "OLSWebAPI\\Controllers\\UploadImg\\UploadController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAkwAkAAAAfAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAkwBEAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T04:12:31.03Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AskAndReplyMappingProfile.cs",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\AskAndReplyMappingProfile.cs",
               "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\AskAndReplyMappingProfile.cs",
@@ -414,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AskAndReplyCustomerController.cs",
               "DocumentMoniker": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\AskAndReplyCustomerController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\AskAndReplyCustomerController.cs",
