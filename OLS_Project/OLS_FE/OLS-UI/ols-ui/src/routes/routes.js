@@ -15,10 +15,10 @@ import Settings from '~/pages/Home/Settings';
 import CourseDetails from '~/pages/Home/CourseDetails';
 import CourseInProgress from '~/pages/Home/CourseInProgress';
 import Payment from '~/pages/Home/Payment';
-import Login from '~/pages/Home/Login';
-import Register from '~/pages/Home/Register';
-import ForgotPassword from '~/pages/Home/ForgotPassword';
-import ResetPassword from '~/pages/Home/ResetPassword';
+import Login from '~/pages/Auth/Login';
+import Register from '~/pages/Auth/Register';
+import ForgotPassword from '~/pages/Auth/ForgotPassword';
+import ResetPassword from '~/pages/Auth/ResetPassword';
 import Blogs from '~/pages/Home/Blogs';
 import BlogDetails from '~/pages/Home/BlogDetails';
 

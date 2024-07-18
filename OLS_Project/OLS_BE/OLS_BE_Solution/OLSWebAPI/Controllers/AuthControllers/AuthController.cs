@@ -152,6 +152,7 @@ namespace OLSWebAPI.Controllers.AuthControllers
                 var response = new
                 {
                     User = resetInfo,
+                    Message = "Reset password ok"
                 };
                 return Ok(response);
             }

@@ -1,4 +1,3 @@
-// From react and libs
 import React from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
@@ -11,25 +10,22 @@ import Footer from '~/layouts/components/Default/Footer';
 
 const cx = classNames.bind(styles);
 
-// Nhận children từ App.js
-const DefaultLayout = ({ children }) => {
+const DefaultLayout = ({ children, useDefaultLayout = true }) => {
     return (
         <main className={cx('wrapper')}>
-            <Header />
-            <Navbar />
+            {useDefaultLayout && <Header />}
+            {useDefaultLayout && <Navbar />}
             <div className={cx('container')}>
-                <div className={cx('content')}>
-                    {/* <h1>back</h1> */}
-                    {children}
-                </div>
+                <div className={cx('content')}>{children}</div>
             </div>
-            <Footer />
+            {useDefaultLayout && <Footer />}
         </main>
     );
 };
 
 DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
+    useDefaultLayout: PropTypes.bool,
 };
 
 export default DefaultLayout;

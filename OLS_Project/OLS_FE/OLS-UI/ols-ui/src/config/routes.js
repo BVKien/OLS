@@ -22,7 +22,7 @@ const routes = {
 
 // Admin
 const adminRoutes = {
-    dashboard: '/',
+    dashboard: '/admin',
     learningpathsmanager: '/learning-paths-manager',
     chaptermanager: '/chapter-manager',
     coursemanager: '/course-manager',

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link, useNavigate } from 'react-router-dom';
 
 // Components
 import styles from './Header.module.scss';
@@ -35,23 +35,31 @@ const Header = () => {
         }
     };
 
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        console.log('Logout function called');
+        localStorage.clear();
+        navigate('/login');
+    };
+
     const userMenu = [
-        // {
-        //     icon: <FontAwesomeIcon icon={faHome} />,
-        //     title: 'Về trang chủ',
-        //     to: '/',
-        // },
+        {
+            icon: <FontAwesomeIcon icon={faHome} />,
+            title: 'Về trang chủ',
+            to: '/admin',
+        },
         {
             icon: <FontAwesomeIcon icon={faGear} />,
             title: 'Cài đặt',
             to: '/settings',
         },
-        {
-            icon: <FontAwesomeIcon icon={faSignOut} />,
-            title: 'Đăng xuất',
-            to: '/login',
-            separate: true,
-        },
+        // {
+        //     icon: <FontAwesomeIcon icon={faSignOut} />,
+        //     title: 'Đăng xuất',
+        //     to: '/login',
+        //     separate: true,
+        // },
     ];
 
     return (
@@ -96,6 +104,9 @@ const Header = () => {
                             </button>
                         )}
                     </Menu>
+                    <button className={cx('action-btn')} onClick={() => handleLogout()}>
+                        <FontAwesomeIcon icon={faSignOut} />
+                    </button>
                 </div>
             </div>
         </header>

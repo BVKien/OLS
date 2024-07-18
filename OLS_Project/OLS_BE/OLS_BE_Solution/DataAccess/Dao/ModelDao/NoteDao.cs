@@ -30,6 +30,7 @@ namespace DataAccess.Dao.ModelDao
                         .Where(n => n.LessonLessonId == lessonId && n.UserUserId == userId)
                         .Include(n => n.LessonLesson)
                         .Include(n => n.UserUser)
+                        .OrderByDescending(n => n.NoteId)
                         .ToList();
                     listNote = _mapper.Map<List<NoteReadDtoForCustomer>>(list);
                     if (listNote.Count == 0)
