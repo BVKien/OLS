@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj": {}
+    "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj": {}
   },
   "projects": {
-    "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\obj\\",
+        "projectPath": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\hienhack\\.nuget\\packages\\",
+        "outputPath": "D:\\Final\\OLS\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hienhack\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

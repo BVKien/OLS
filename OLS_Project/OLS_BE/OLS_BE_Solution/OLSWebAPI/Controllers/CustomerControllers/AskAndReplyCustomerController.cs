@@ -1,4 +1,6 @@
-﻿using BusinessObject.Dtos.AskAndReplyDtos;
+﻿using AutoMapper;
+using BusinessObject.Dtos.AskAndReplyDtos;
+using BusinessObject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Services.Interfaces.ModelInterfaces;
 
@@ -9,6 +11,7 @@ namespace OLSWebAPI.Controllers.CustomerControllers
     public class AskAndReplyCustomerController : ControllerBase
     {
         private readonly IAskAndReplyRepository _repo;
+       
         public AskAndReplyCustomerController(IAskAndReplyRepository repo)
         {
             _repo = repo;
@@ -99,11 +102,31 @@ namespace OLSWebAPI.Controllers.CustomerControllers
         }
 
         [HttpPost("create_ask_or_reply")]
-        public IActionResult CreateAskOrReply(AskAndReplyCreateDtoForCustomer ar)
+        public async Task<IActionResult> CreateAskOrReply([FromForm] AskAndReplyCreateDtoForCustomer ar, [FromForm] IFormFile image)
         {
             try
             {
+                if (image != null && image.Length > 0)
+                {
+                    var uploadsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "uploads");
+                    if (!Directory.Exists(uploadsFolderPath))
+                    {
+                        Directory.CreateDirectory(uploadsFolderPath);
+                    }
+
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
+                    var filePath = Path.Combine(uploadsFolderPath, uniqueFileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await image.CopyToAsync(fileStream);
+                    }
+
+                    ar.ImagePath = "/uploads/" + uniqueFileName;
+                }
+
                 _repo.CreateAskOrReply(ar);
+
                 return Ok(ar);
             }
             catch (Exception ex)
@@ -111,6 +134,7 @@ namespace OLSWebAPI.Controllers.CustomerControllers
                 return BadRequest(ex.Message);
             }
         }
+
 
         [HttpPut("update_ask_or_reply/{ar_id}/{user_id}/{discuss_id}")]
         public IActionResult UpdateAskOrReply(int ar_id, int user_id, int discuss_id, AskAndReplyUpdateDtoForCustomer ar)

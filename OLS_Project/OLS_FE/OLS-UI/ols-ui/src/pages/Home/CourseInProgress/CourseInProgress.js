@@ -11,6 +11,7 @@ import { faBars, faArrowRight, faPen, faTrash, faX, faEllipsis } from '@fortawes
 import { faComment, faImage } from '@fortawesome/free-regular-svg-icons';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
+import AddImg from '~/components/AddImg';
 
 // customer api
 import customerApi from '~/services/apis/customerApi';
@@ -1281,7 +1282,7 @@ const CourseInProgress = () => {
                                                 type="file"
                                                 accept="image/*"
                                                 name={'image'}
-                                                value={userAskInput.image}
+                                                value={userAskInput.image.name}
                                                 onChange={handleUserAskInputChange}
                                             />
                                             <FontAwesomeIcon icon={faImage} />

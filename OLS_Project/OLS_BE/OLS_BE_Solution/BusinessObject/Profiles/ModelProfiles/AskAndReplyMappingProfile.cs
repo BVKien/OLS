@@ -13,12 +13,14 @@ namespace BusinessObject.Profiles.ModelProfiles
     {
         public AskAndReplyMappingProfile()
         {
-            // dest => src 
             CreateMap<AskAndReply, AskAndReplyReadDtoForCustomer>()
-                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.UserUser.FullName))
-                .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.UserUser.Image))
-                .ReverseMap();
-            CreateMap<AskAndReply, AskAndReplyCreateDtoForCustomer>().ReverseMap();
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.UserUser.FullName))
+            .ForMember(dest => dest.Avatar, opt => opt.MapFrom(src => src.UserUser.Image))
+            .ReverseMap();
+
+            CreateMap<AskAndReply, AskAndReplyCreateDtoForCustomer>().ReverseMap()
+                .ForMember(dest => dest.Image,  opt => opt.MapFrom(src => src.ImagePath));
+
             CreateMap<AskAndReply, AskAndReplyUpdateDtoForCustomer>().ReverseMap();
         }
     }
