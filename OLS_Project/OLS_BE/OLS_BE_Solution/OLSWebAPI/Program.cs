@@ -52,6 +52,17 @@ namespace OLSWebAPI
             app.UseAuthorization();
             app.UseCors(); // Apply CORS policy
 
+            app.UseStaticFiles();
+
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
             app.MapControllers();
             app.Run();
         }

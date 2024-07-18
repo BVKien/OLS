@@ -18,6 +18,7 @@ namespace BusinessObject.Dtos.BlogDtos
         public int BlogTopicBlogTopicId { get; set; }
         public string? BlogTopicName { get; set; }
         public int BlogTagBlogTagId { get; set; }
+        public int UserUserId { get; set; }
         public string? UserName { get; set; }
         public string? UserImage { get; set; }
         public DateTime? CreatedAt { get; set; }

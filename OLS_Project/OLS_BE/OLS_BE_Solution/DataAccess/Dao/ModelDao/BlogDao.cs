@@ -30,6 +30,7 @@ namespace DataAccess.Dao.ModelDao
                     var blogs = context.Blogs
                         .Include(b => b.UserUser)
                         .Include(b => b.BlogTopicBlogTopic)
+                        .Include(b => b.BlogTagBlogTag)
                         .ToList();
                     listBlog = _mapper.Map<List<BlogReadDtoForCustomer>>(blogs);
                 }

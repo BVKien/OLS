@@ -11,6 +11,7 @@ import { faBars, faArrowRight, faPen, faTrash, faX, faEllipsis } from '@fortawes
 import { faComment, faImage } from '@fortawesome/free-regular-svg-icons';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
+import QRCode from '~/assets/images/payment/QRCode.jpg';
 
 // customer api
 import customerApi from '~/services/apis/customerApi';
@@ -397,41 +398,68 @@ const CourseInProgress = () => {
         }
     }, [selectedAskId]);
 
-    // Handle change value of user ask input
-    const handleUserAskInputChange = (event) => {
+    const handleUserAskInputChange = async (event) => {
         const { name, value, files } = event.target;
 
         if (name === 'image' && files && files[0]) {
-            // Read image and update state preview
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setSelectedAskImage(reader.result);
-            };
-            reader.readAsDataURL(files[0]);
-            console.log(files, files[0]);
-        }
+            const formData = new FormData();
+            formData.append('image', files[0]);
 
-        setUserAskInput({
-            ...userAskInput,
-            [name]: value,
-            userUserId: userId,
-            discussDiscussId: discussDetails.discussId,
-        });
+            try {
+                const response = await axios.post('https://localhost:7003/api/Upload/UploadImage', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+
+                console.log('Response:', response.data);
+
+                if (response.data && response.data.imageUrl) {
+                    const imageUrl = response.data.imageUrl;
+
+                    setUserAskInput((prevInput) => ({
+                        ...prevInput,
+                        image: imageUrl,
+                        userUserId: userId,
+                        discussDiscussId: discussDetails.discussId,
+                    }));
+
+                    setSelectedAskImage(imageUrl);
+                    console.log('Image uploaded:', imageUrl);
+                } else {
+                    console.error('Invalid response data:', response.data);
+                }
+            } catch (error) {
+                console.error('Error uploading image:', error);
+            }
+        } else {
+            setUserAskInput((prevInput) => ({
+                ...prevInput,
+                [name]: value,
+                userUserId: userId,
+                discussDiscussId: discussDetails.discussId,
+            }));
+        }
     };
 
-    // Handle submit ask input
     const handleSubmitAskInput = async (event) => {
         event.preventDefault();
 
         try {
             await axios.post(createAskApiUrl, userAskInput);
             console.log('Create ask success', userAskInput);
+
             // Recall Api after create ask success
             const responseAsks = await axios.get(
-                customerApi.conversation.get_all_conversation_in_discussion + '/' + discussDetails.discussId,
+                `${customerApi.conversation.get_all_conversation_in_discussion}/${discussDetails.discussId}`,
             );
             setAsks(responseAsks.data);
-            setUserAskInput(createAskData);
+            setUserAskInput({
+                image: '',
+                userUserId: '',
+                discussDiscussId: '',
+                contentFor: '',
+            });
             setSelectedAskImage(null);
         } catch (error) {
             console.error('Error creating ask:', error);
@@ -1264,14 +1292,13 @@ const CourseInProgress = () => {
                                     />
                                 </div>
 
-                                {/* Input Ask */}
                                 <form onSubmit={handleSubmitAskInput}>
                                     <div className={cx('discuss-input')}>
                                         <Image src={userDetails.image} className={cx('user-avatar')} />
                                         <textarea
                                             placeholder="Đặt câu hỏi"
                                             className={cx('discuss-input__user-input__text')}
-                                            name={'contentFor'}
+                                            name="contentFor"
                                             value={userAskInput.contentFor}
                                             onChange={handleUserAskInputChange}
                                         ></textarea>
@@ -1280,8 +1307,7 @@ const CourseInProgress = () => {
                                                 id="askImageInput"
                                                 type="file"
                                                 accept="image/*"
-                                                name={'image'}
-                                                value={userAskInput.image}
+                                                name="image"
                                                 onChange={handleUserAskInputChange}
                                             />
                                             <FontAwesomeIcon icon={faImage} />
@@ -1289,7 +1315,7 @@ const CourseInProgress = () => {
                                         {selectedAskImage && (
                                             <div>
                                                 <div className={cx('image-preview__icon-wrap')}>
-                                                    <button onClick={handleRemoveAskImage}>
+                                                    <button onClick={() => setSelectedAskImage(null)}>
                                                         <FontAwesomeIcon
                                                             icon={faX}
                                                             className={cx('image-preview__icon')}
@@ -1304,12 +1330,12 @@ const CourseInProgress = () => {
                                             </div>
                                         )}
                                         <div className={cx('discuss-input__button')}>
-                                            {(userAskInput.contentFor !== '' && (
+                                            {(userAskInput.contentFor !== '' || selectedAskImage !== null) && (
                                                 <>
                                                     <Button
                                                         primary
                                                         small
-                                                        type={'submit'}
+                                                        type="submit"
                                                         className={cx('discuss-input__button-ask')}
                                                     >
                                                         Bình luận
@@ -1317,53 +1343,13 @@ const CourseInProgress = () => {
                                                     <Button
                                                         outline
                                                         small
-                                                        onClick={handleAskCancel}
+                                                        onClick={() => setUserAskInput(createAskData)}
                                                         className={cx('discuss-input__button-cancel')}
                                                     >
                                                         Hủy
                                                     </Button>
                                                 </>
-                                            )) ||
-                                                (selectedAskImage !== null && (
-                                                    <>
-                                                        <Button
-                                                            primary
-                                                            small
-                                                            type={'submit'}
-                                                            className={cx('discuss-input__button-ask')}
-                                                        >
-                                                            Bình luận
-                                                        </Button>
-                                                        <Button
-                                                            outline
-                                                            small
-                                                            onClick={handleAskCancel}
-                                                            className={cx('discuss-input__button-cancel')}
-                                                        >
-                                                            Hủy
-                                                        </Button>
-                                                    </>
-                                                )) ||
-                                                (userAskInput.contentFor !== '' && selectedAskImage !== null && (
-                                                    <>
-                                                        <Button
-                                                            primary
-                                                            small
-                                                            type={'submit'}
-                                                            className={cx('discuss-input__button-ask')}
-                                                        >
-                                                            Bình luận
-                                                        </Button>
-                                                        <Button
-                                                            outline
-                                                            small
-                                                            onClick={handleAskCancel}
-                                                            className={cx('discuss-input__button-cancel')}
-                                                        >
-                                                            Hủy
-                                                        </Button>
-                                                    </>
-                                                ))}
+                                            )}
                                         </div>
                                     </div>
                                 </form>
@@ -1383,6 +1369,7 @@ const CourseInProgress = () => {
                                                     {ask.image && (
                                                         <Image
                                                             src={ask.image}
+                                                            // QRCode {ask.image}
                                                             className={cx('discuss-ask-content__image')}
                                                         />
                                                     )}

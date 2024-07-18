@@ -110,9 +110,9 @@ const CoursesFree = () => {
                 {/* Row */}
                 <div className={cx('row')}>
                     <div className={cx('show-more')}>
-                        <Button outline small className={cx('btn-show-more')}>
+                        {/* <Button outline small className={cx('btn-show-more')}>
                             <span className={cx('btn-show-more__title')}>Hiển thị thêm</span>
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
             </div>
