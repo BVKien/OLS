@@ -11,11 +11,11 @@ namespace Repository.Services.Interfaces.ModelInterfaces
     public interface IBlogTopicRepository
     {
         // == customer == 
-        List<BlogReadDtoForCustomer> GetAllBlogTopicForCustomer();
+        List<BlogTopicReadDtoForCustomer> GetAllBlogTopicForCustomer();
 
         // == expert ==
-        List<BlogReadDtoForExpert> GetAllBlogTopicForExpert();
-        BlogReadDtoForExpert GetBlogTopicByBlogTopicIdForExpert(int btId);
+        List<BlogTopicReadDtoForExpert> GetAllBlogTopicForExpert();
+        BlogTopicReadDtoForExpert GetBlogTopicByBlogTopicIdForExpert(int btId);
         void CreateBlogTopic(BlogTopicCreateDtoForExpert bt);
         void UpdateBlogTopic(int btId, BlogTopicUpdateDtoForExpert bt);
         void DeleteBlogTopic(int btId);

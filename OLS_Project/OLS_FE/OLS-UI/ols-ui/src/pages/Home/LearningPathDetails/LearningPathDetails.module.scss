@@ -1,3 +1,7 @@
+.wrapper {
+    height: 1500px;
+}
+
 .grid {
     width: var(--default-grid);
     max-width: 100%;
@@ -102,10 +106,10 @@
 }
 
 .learning-path-details-item__image {
-    width: 130px;
-    height: 130px;
+    width: 250px;
+    height: 140px;
     margin-top: 50px;
-    margin-left: 160px;
+    margin-left: 90px;
     border-radius: 5px;
 }
 

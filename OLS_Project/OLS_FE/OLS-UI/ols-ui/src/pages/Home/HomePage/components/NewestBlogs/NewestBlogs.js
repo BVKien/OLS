@@ -8,6 +8,8 @@ import { useState, useEffect } from 'react';
 import styles from './NewestBlogs.module.scss';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 // apis
 import customerApi from '~/services/apis/customerApi';
@@ -53,7 +55,10 @@ const NewestBlogs = () => {
                     {blogs.map((blog) => (
                         <div key={blog.blogId} className={cx('col-3')}>
                             <div className={cx('blog-item')}>
-                                <a href="#" className={cx('blog-item__link')}>
+                                <Link
+                                    to={'http://localhost:3003' + config.routes.blogdetails + '?blogId=' + blog.blogId}
+                                    className={cx('blog-item__link')}
+                                >
                                     <Image
                                         src={blog.blogImage}
                                         alt={blog.blogTitle}
@@ -65,15 +70,12 @@ const NewestBlogs = () => {
 
                                         <span className={cx('blog-item__author')}>
                                             <Image src={blog.userImage} className={cx('blog-item__author__image')} />
-                                            {blog.fullName}
+                                            {blog.userName}
                                         </span>
 
                                         <div className={cx('blog-item__date-read')}>
                                             <span className={cx('blog-item__post-date')}>
                                                 Ngày đăng: {formatDate(blog.postDate)}
-                                            </span>
-                                            <span className={cx('blog-item__author-read__time')}>
-                                                {getReadTimeInMinutes(blog.readTime)} phút đọc
                                             </span>
                                         </div>
                                         <div className={cx('blog-item__footer')}>
@@ -81,20 +83,20 @@ const NewestBlogs = () => {
                                             <span className={cx('blog-item__blog-hashtag')}>Bài viết</span>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     ))}
                 </div>
 
                 {/* Row */}
-                <div className={cx('row')}>
+                {/* <div className={cx('row')}>
                     <div className={cx('show-more')}>
-                        {/* <Button outline small className={cx('btn-show-more')}>
-                            <span className={cx('btn-show-more__title')}>Hiển thị thêm</span>
-                        </Button> */}
+                        <Button outline small className={cx('btn-show-more')}>
+                            <span className={cx('btn-show-more__title')}>Xem tất cả</span>
+                        </Button>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -20,13 +20,13 @@ namespace Repository.Services.Implements.ModelImplements
         }
 
         // == customer == 
-        public List<BlogReadDtoForCustomer> GetAllBlogTopicForCustomer()
+        public List<BlogTopicReadDtoForCustomer> GetAllBlogTopicForCustomer()
             => _blogTopicDao.GetAllBlogTopicForCustomer();
 
         // == expert ==
-        public List<BlogReadDtoForExpert> GetAllBlogTopicForExpert()
+        public List<BlogTopicReadDtoForExpert> GetAllBlogTopicForExpert()
             => _blogTopicDao.GetAllBlogTopicForExpert();
-        public BlogReadDtoForExpert GetBlogTopicByBlogTopicIdForExpert(int btId)
+        public BlogTopicReadDtoForExpert GetBlogTopicByBlogTopicIdForExpert(int btId)
             => _blogTopicDao.GetBlogTopicByBlogTopicIdForExpert(btId);
         public void CreateBlogTopic(BlogTopicCreateDtoForExpert bt)
             => _blogTopicDao.CreateBlogTopic(bt);

@@ -15,7 +15,6 @@ namespace BusinessObject.Profiles.ModelProfiles
                 .ForMember(dest => dest.UserImage, opt => opt.MapFrom(src => src.UserUser.Image))
                 .ForMember(dest => dest.BlogTopicName, opt => opt.MapFrom(src => src.BlogTopicBlogTopic.BlogTopicName))
                 .ReverseMap();
-            CreateMap<Blog, BlogReadDtoForCustomer>().ReverseMap();
             CreateMap<Blog, BlogCreateDtoForCustomer>().ReverseMap();
             CreateMap<Blog, BlogUpdateDtoForCustomer>().ReverseMap();
 

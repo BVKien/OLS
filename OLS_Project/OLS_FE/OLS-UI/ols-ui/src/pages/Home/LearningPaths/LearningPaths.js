@@ -53,19 +53,18 @@ const LearningPaths = () => {
                                 <h1>Tất cả các lộ trình học tập</h1>
                             </div>
 
-                            <div className={cx('learningPath-header__logo')}>
-                                {/* Logo */}
+                            {/* <div className={cx('learningPath-header__logo')}>
                                 <Image src={logo} className={cx('learningPath-header__logo-link')} />
-                            </div>
+                            </div> */}
 
-                            <div className={cx('learningPath-header__content')}>
+                            {/* <div className={cx('learningPath-header__content')}>
                                 <h1>Chi tiết</h1>
                                 <p>
                                     Các lộ trình học được chia theo nhiều hướng đi
                                     <br />
                                     cho người học vạch ra con đường rõ ràng.
                                 </p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -91,11 +90,15 @@ const LearningPaths = () => {
                                                 {learningPath.description}
                                             </div>
                                             <div className={cx('learningPath-item__content-course-amount')}>
-                                                Số lượng: 15 khóa học
+                                                Số lượng: {learningPath.courseAmount} khóa học
                                             </div>
                                             <div className={cx('learningPath-item__content-go')}>
                                                 <Link
-                                                    to={config.routes.learningpathdetails}
+                                                    to={
+                                                        'http://localhost:3003' +
+                                                        config.routes.learningpathdetails +
+                                                        `?learningPathId=${learningPath.learningPathId}`
+                                                    }
                                                     className={cx('learningPath-item__content-go-link')}
                                                 >
                                                     Đi đến lộ trình <FontAwesomeIcon icon={faArrowRight} />

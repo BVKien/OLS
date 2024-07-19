@@ -2,6 +2,7 @@
 using BusinessObject.Dtos.BlogDtos;
 using BusinessObject.Dtos.BlogTopicDtos;
 using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +21,15 @@ namespace DataAccess.Dao.ModelDao
 
         // == customer == 
         // get all blog topic
-        public List<BlogReadDtoForCustomer> GetAllBlogTopicForCustomer()
+        public List<BlogTopicReadDtoForCustomer> GetAllBlogTopicForCustomer()
         {
-            var btList = new List<BlogReadDtoForCustomer>();
+            var btList = new List<BlogTopicReadDtoForCustomer>();
             try
             {
                 using (var context = new OLS_PRN231_V1Context())
                 {
                     var list = context.BlogTopics.ToList();
-                    btList = _mapper.Map<List<BlogReadDtoForCustomer>>(list);
+                    btList = _mapper.Map<List<BlogTopicReadDtoForCustomer>>(list);
                 }
             }
             catch (Exception ex)
@@ -41,15 +42,15 @@ namespace DataAccess.Dao.ModelDao
 
         // == expert ==
         // get all blog topic 
-        public List<BlogReadDtoForExpert> GetAllBlogTopicForExpert()
+        public List<BlogTopicReadDtoForExpert> GetAllBlogTopicForExpert()
         {
-            var btList = new List<BlogReadDtoForExpert>();
+            var btList = new List<BlogTopicReadDtoForExpert>();
             try
             {
                 using (var context = new OLS_PRN231_V1Context())
                 {
                     var list = context.BlogTopics.ToList();
-                    btList = _mapper.Map<List<BlogReadDtoForExpert>>(list);
+                    btList = _mapper.Map<List<BlogTopicReadDtoForExpert>>(list);
                 }
             }
             catch (Exception ex)
@@ -61,9 +62,9 @@ namespace DataAccess.Dao.ModelDao
         }
 
         // get blog by blog id 
-        public BlogReadDtoForExpert GetBlogTopicByBlogTopicIdForExpert(int btId)
+        public BlogTopicReadDtoForExpert GetBlogTopicByBlogTopicIdForExpert(int btId)
         {
-            var btDetail = new BlogReadDtoForExpert();
+            var btDetail = new BlogTopicReadDtoForExpert();
             try
             {
                 using (var context = new OLS_PRN231_V1Context())
@@ -74,7 +75,7 @@ namespace DataAccess.Dao.ModelDao
                     {
                         throw new Exception("Not found blog topic.");
                     }
-                    btDetail = _mapper.Map<BlogReadDtoForExpert>(bt);
+                    btDetail = _mapper.Map<BlogTopicReadDtoForExpert>(bt);
                 }
             }
             catch (Exception ex)

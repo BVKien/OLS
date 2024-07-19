@@ -2,6 +2,7 @@
 using BusinessObject.Dtos.LearningPathDto;
 using BusinessObject.Dtos.LearningPathDtos;
 using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Dao.ModelDao
 {
@@ -22,7 +23,9 @@ namespace DataAccess.Dao.ModelDao
             {
                 using (var context = new OLS_PRN231_V1Context())
                 {
-                    var list = context.LearningPaths.ToList();
+                    var list = context.LearningPaths
+                        .Include(lp => lp.Courses)
+                        .ToList();
                     listLP = _mapper.Map<List<LearningPathReadDtoForCustomer>>(list);
                 }
             }

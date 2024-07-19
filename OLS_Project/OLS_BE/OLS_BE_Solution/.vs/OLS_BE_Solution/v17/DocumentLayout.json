@@ -3,19 +3,83 @@
   "WorkspaceRootPath": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\modeldao\\blogtopicdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\blogtopicdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\implements\\modelimplements\\blogtopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\implements\\modelimplements\\blogtopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\implements\\modelimplements\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\implements\\modelimplements\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\repository\\services\\interfaces\\modelinterfaces\\iblogtopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D46E75AE-D794-4749-B9A4-2B1A8F782A7B}|Repository\\Repository.csproj|solutionrelative:repository\\services\\interfaces\\modelinterfaces\\iblogtopicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\profiles\\modelprofiles\\blogtopicmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\blogtopicmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\profiles\\modelprofiles\\blogmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\blogmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\businessobject\\dtos\\blogtopicdtos\\blogtopicreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\blogtopicdtos\\blogtopicreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\dataaccess\\dao\\modeldao\\learningpathdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\learningpathdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\configuration\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\configuration\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\profiles\\modelprofiles\\learningpathmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\learningpathmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\dtos\\learningpathdtos\\learningpathreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\dtos\\learningpathdtos\\learningpathreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\controllers\\customercontrollers\\learningpathcustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\controllers\\customercontrollers\\learningpathcustomercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\dataaccess\\dao\\modeldao\\chapterdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3062BFFC-93E4-4C27-BF52-C2145A1348CA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dao\\modeldao\\chapterdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\profiles\\modelprofiles\\lessonmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\lessonmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\profiles\\modelprofiles\\feedbackmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\feedbackmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\businessobject\\profiles\\modelprofiles\\coursemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F847C91-C12C-42FC-BC07-2B0AE780F8BC}|BusinessObject\\BusinessObject.csproj|solutionrelative:businessobject\\profiles\\modelprofiles\\coursemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|d:\\fpt_university_hoa_lac\\ky_8_summer_2024\\prn231\\final_project\\ols_project\\ols_be\\ols_be_solution\\olswebapi\\controllers\\uploadcontrollers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\olswebapi\\controllers\\uploadcontrollers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AE6E913-D36F-45A7-8DCF-7F839F2E08DB}|OLSWebAPI\\OLSWebAPI.csproj|solutionrelative:olswebapi\\controllers\\uploadcontrollers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -26,8 +90,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 275,
-          "SelectedChildIndex": 64,
+          "SelectedChildIndex": 69,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlogTopicRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\BlogTopicRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\BlogTopicRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\BlogTopicRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Implements\\ModelImplements\\BlogTopicRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:54:17.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlogRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\BlogRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Implements\\ModelImplements\\BlogRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Implements\\ModelImplements\\BlogRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Implements\\ModelImplements\\BlogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:54:16.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IBlogTopicRepository.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogTopicRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogTopicRepository.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogTopicRepository.cs",
+              "RelativeToolTip": "Repository\\Services\\Interfaces\\ModelInterfaces\\IBlogTopicRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:53:49.533Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
@@ -286,33 +389,196 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\appsettings.json",
-              "RelativeDocumentMoniker": "BusinessObject\\appsettings.json",
-              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\appsettings.json",
-              "RelativeToolTip": "BusinessObject\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-18T19:06:18.035Z",
+              "DocumentIndex": 2,
+              "Title": "BlogTopicDao.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\BlogTopicDao.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\BlogTopicDao.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\BlogTopicDao.cs",
+              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\BlogTopicDao.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAuwEsAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:29:29.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\appsettings.json",
+              "RelativeDocumentMoniker": "BusinessObject\\appsettings.json",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\appsettings.json",
+              "RelativeToolTip": "BusinessObject\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-18T19:06:18.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "OLSWebAPI\\appsettings.json",
               "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\appsettings.json",
               "RelativeToolTip": "OLSWebAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-07-18T19:05:53.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "BlogTopicMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogTopicMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\BlogTopicMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogTopicMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\BlogTopicMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:29:24.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BlogTopicReadDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicReadDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicReadDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicReadDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\BlogTopicDtos\\BlogTopicReadDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:33:01.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LearningPathDao.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\LearningPathDao.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\LearningPathDao.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\LearningPathDao.cs",
+              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\LearningPathDao.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAwBsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:12:49.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BlogMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\BlogMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\BlogMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\BlogMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T14:29:09.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "RelativeToolTip": "OLSWebAPI\\Configuration\\ServiceExtensions.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAArwE4AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T15:32:46.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LearningPathMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\LearningPathMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\LearningPathMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\LearningPathMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\LearningPathMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:14:03.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LearningPathCustomerController.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\LearningPathCustomerController.cs",
+              "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\CustomerControllers\\LearningPathCustomerController.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\CustomerControllers\\LearningPathCustomerController.cs",
+              "RelativeToolTip": "OLSWebAPI\\Controllers\\CustomerControllers\\LearningPathCustomerController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:25:52.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LearningPathReadDto.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LearningPathDtos\\LearningPathReadDto.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Dtos\\LearningPathDtos\\LearningPathReadDto.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Dtos\\LearningPathDtos\\LearningPathReadDto.cs",
+              "RelativeToolTip": "BusinessObject\\Dtos\\LearningPathDtos\\LearningPathReadDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:13:35.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChapterDao.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "RelativeToolTip": "DataAccess\\Dao\\ModelDao\\ChapterDao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:18:12.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FeedbackMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\FeedbackMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\FeedbackMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\FeedbackMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\FeedbackMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:14:49.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LessonMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\LessonMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:14:02.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CourseMappingProfile.cs",
+              "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "ToolTip": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "RelativeToolTip": "BusinessObject\\Profiles\\ModelProfiles\\CourseMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T08:14:00.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Program.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Program.cs",
@@ -320,12 +586,11 @@
               "RelativeToolTip": "OLSWebAPI\\Program.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAQwEYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T19:02:45.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T19:02:45.191Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 19,
               "Title": "UploadController.cs",
               "DocumentMoniker": "D:\\FPT_University_Hoa_Lac\\Ky_8_Summer_2024\\PRN231\\Final_Project\\OLS_Project\\OLS_BE\\OLS_BE_Solution\\OLSWebAPI\\Controllers\\UploadControllers\\UploadController.cs",
               "RelativeDocumentMoniker": "OLSWebAPI\\Controllers\\UploadControllers\\UploadController.cs",
@@ -333,8 +598,7 @@
               "RelativeToolTip": "OLSWebAPI\\Controllers\\UploadControllers\\UploadController.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAqwDEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T18:53:34.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T18:53:34.461Z"
             }
           ]
         },

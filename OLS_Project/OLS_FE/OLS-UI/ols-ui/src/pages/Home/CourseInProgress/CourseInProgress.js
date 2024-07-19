@@ -12,9 +12,11 @@ import { faComment, faImage } from '@fortawesome/free-regular-svg-icons';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
 import QRCode from '~/assets/images/payment/QRCode.jpg';
+import config from '~/config';
 
 // customer api
 import customerApi from '~/services/apis/customerApi';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -1033,15 +1035,17 @@ const CourseInProgress = () => {
                                                 <div className={cx('lesson-item__wrap')}>
                                                     {lessons.map((lesson) => (
                                                         <span key={lesson.lessonId} className={cx('lesson-item__name')}>
-                                                            <a
-                                                                href={`http://localhost:3003/course-in-progress?courseId=${courseId}&lessonId=${lesson.lessonId}`}
+                                                            <Link
                                                                 onClick={(e) => {
                                                                     e.preventDefault();
-                                                                    window.location.href = `http://localhost:3003/course-in-progress?courseId=${courseId}&lessonId=${lesson.lessonId}`;
+                                                                    window.location.href =
+                                                                        'http://localhost:3003' +
+                                                                        config.routes.courseinprogress +
+                                                                        `?courseId=${courseId}&lessonId=${lesson.lessonId}`;
                                                                 }}
                                                             >
                                                                 <p>{lesson.title}</p>
-                                                            </a>
+                                                            </Link>
                                                             <span
                                                                 className={cx('lesson-item__quiz')}
                                                                 onClick={() =>

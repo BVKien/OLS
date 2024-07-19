@@ -93,9 +93,7 @@ const CoursesFree = () => {
                                         <span className={cx('course-item__name')}>{course.courseName}</span>
                                         <div className={cx('course-item__footer')}>
                                             <span className={cx('course-item__fee')}></span>
-                                            <span className={cx('course-item__course-degree')}>
-                                                Khóa học / Chứng chỉ
-                                            </span>
+                                            <span className={cx('course-item__course-degree')}>Khóa học</span>
                                         </div>
                                     </div>
                                     <div className={cx('free')}>

@@ -25,8 +25,8 @@ const Footer = () => {
             <div className={cx('grid')}>
                 {/* Row */}
                 {/* Content */}
-                <div className={cx('row')}>
-                    {/* Col */}
+                {/* <div className={cx('row')}>
+                    Col
                     <div className={cx('col-3')}>
                         <div className={cx('footer-content')}>
                             <h1 className={cx('footer-heading')}>OLS</h1>
@@ -75,7 +75,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Col */}
                     <div className={cx('col-3')}>
                         <div className={cx('footer-content')}>
                             <h1 className={cx('footer-heading')}>Cộng đồng</h1>
@@ -119,7 +118,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Col */}
                     <div className={cx('col-3')}>
                         <div className={cx('footer-content')}>
                             <h1 className={cx('footer-heading')}>Hơn nữa</h1>
@@ -158,7 +156,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Col */}
                     <div className={cx('col-3')}>
                         <div className={cx('footer-content')}>
                             <h1 className={cx('footer-heading')}>Mobile App</h1>
@@ -177,7 +174,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Row */}
                 {/* Copyright */}

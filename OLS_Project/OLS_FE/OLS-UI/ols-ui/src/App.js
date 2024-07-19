@@ -20,7 +20,7 @@ function App() {
                         let Layout = DefaultLayout;
 
                         if (
-                            route.path === '/login' ||
+                            route.path === '/' ||
                             route.path === '/register' ||
                             route.path === '/forgot-password' ||
                             route.path === '/reset-password'
@@ -70,36 +70,6 @@ function App() {
                             />
                         );
                     })}
-
-                    {/* Private Admin Routes */}
-                    {/* {privateAdminRoutes.map((route, index) => {
-                        const Page = route.component;
-                        let Layout = isAdmin ? ManagerLayout : DefaultLayout;
-
-                        if (route.layout) {
-                            Layout = route.layout;
-                        } else if (route.layout === null) {
-                            Layout = Fragment;
-                        }
-
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                element={
-                                    <ProtectedRoute adminOnly>
-                                        {isAdmin ? (
-                                            <Layout>
-                                                <Page />
-                                            </Layout>
-                                        ) : (
-                                            <Navigate to="/" replace />
-                                        )}
-                                    </ProtectedRoute>
-                                }
-                            />
-                        );
-                    })} */}
 
                     {privateAdminRoutes.map((route, index) => {
                         const Page = route.component;

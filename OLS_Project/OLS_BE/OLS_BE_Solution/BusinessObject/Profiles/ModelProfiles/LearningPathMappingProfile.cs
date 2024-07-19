@@ -11,8 +11,10 @@ namespace BusinessObject.Profiles.ModelProfile
         {
             // src -> dest 
             // == customer == 
-            CreateMap<LearningPath, LearningPathReadDtoForCustomer>().ReverseMap();
-            
+            CreateMap<LearningPath, LearningPathReadDtoForCustomer>()
+                .ForMember(dest => dest.CourseAmount, opt => opt.MapFrom(src => src.Courses.Count))
+                .ReverseMap();
+
             // == admin == 
             CreateMap<LearningPath, LearningPathReadDtoForAdmin>().ReverseMap();
             CreateMap<LearningPath, LearningPathCreateDtoForAdmin>().ReverseMap();
@@ -20,3 +22,4 @@ namespace BusinessObject.Profiles.ModelProfile
         }
     }
 }
+//.ForMember(dest => dest.TotalUnitOrdered, otp => otp.MapFrom(src => src.OrderDetails.Sum(x => x.Quantity)))

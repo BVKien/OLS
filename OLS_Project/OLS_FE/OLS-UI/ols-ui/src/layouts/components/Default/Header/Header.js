@@ -64,7 +64,7 @@ const Header = () => {
     const handleLogout = () => {
         console.log('Logout function called');
         localStorage.clear();
-        navigate('/login');
+        navigate('/');
     };
 
     const handleMenuChange = (menuItem) => {
@@ -86,11 +86,6 @@ const Header = () => {
             title: 'Cài đặt',
             to: '/settings',
         },
-        // {
-        //     icon: <FontAwesomeIcon icon={faSignOut} />,
-        //     title: 'Đăng xuất',
-        //     separate: true,
-        // },
     ];
 
     return (

@@ -28,6 +28,7 @@ const Navbar = () => {
                 <MenuItem title="Các lộ trình" to={config.routes.learningpaths} />
                 {/* Test */}
                 {/* <MenuItem title="User profile" to={config.routes.userprofile} /> */}
+                <MenuItem title="Các bài viết" to={config.routes.blogs} />
             </Menu>
         </nav>
     );

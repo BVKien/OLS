@@ -1,7 +1,7 @@
 // Home
 const routes = {
     // public routes
-    home: '/',
+    home: '/home',
     learningpaths: '/learning-paths', // snake-case
     learningpathdetails: '/learning-path-details',
     search: '/search',
@@ -10,7 +10,7 @@ const routes = {
     userprofile: '/user-profile',
     settings: '/settings',
     payment: '/payment',
-    login: '/login',
+    login: '/',
     register: '/register',
     forgotpassword: '/forgot-password',
     resetpassword: '/reset-password',
@@ -23,12 +23,12 @@ const routes = {
 // Admin
 const adminRoutes = {
     dashboard: '/admin',
-    learningpathsmanager: '/learning-paths-manager',
-    chaptermanager: '/chapter-manager',
-    coursemanager: '/course-manager',
-    lessonmanager: '/lesson-manager',
-    usermanager: '/user-manager',
-    blogmanager: '/blog-manager',
+    learningpathsmanager: '/admin/learning-paths-manager',
+    chaptermanager: '/admin/chapter-manager',
+    coursemanager: '/admin/course-manager',
+    lessonmanager: '/admin/lesson-manager',
+    usermanager: '/admin/user-manager',
+    blogmanager: '/admin/blog-manager',
 };
 
 export { routes, adminRoutes };
