@@ -64,7 +64,7 @@
 }
 
 .user-manager-list__table-body__content__item-user-avatar {
-    width: 100px;
+    width: 180px;
     height: 100px;
     border-radius: 10px;
 }
@@ -450,4 +450,12 @@
 .paginate-active {
     color: var(--white);
     background-color: var(--primary);
+}
+
+.user-manager-list__table-body__content__item-status.active {
+    color: var(--primary); /* Màu xanh cho trạng thái Active */
+}
+
+.user-manager-list__table-body__content__item-status.inactive {
+    color: red; /* Màu đỏ cho trạng thái Inactive */
 }

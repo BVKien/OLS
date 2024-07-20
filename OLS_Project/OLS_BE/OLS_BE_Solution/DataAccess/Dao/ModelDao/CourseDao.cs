@@ -84,7 +84,7 @@ namespace DataAccess.Dao
 
         // == admin == 
         // get all courses
-        public List<CourseReadDtoForAdmin> GetAllCourseForAdmin()
+        public List<CourseReadDtoForAdmin> GetAllCourseForAdmin(int lpId)
         {
             var listCourses = new List<CourseReadDtoForAdmin>();
             try
@@ -93,6 +93,7 @@ namespace DataAccess.Dao
                 {
                     var courses = context.Courses
                         .Include(c => c.LearningPathLearningPath)
+                        .Where(c => c.LearningPathLearningPathId == lpId)
                         .ToList();
                     listCourses = _mapper.Map<List<CourseReadDtoForAdmin>>(courses);
                 }

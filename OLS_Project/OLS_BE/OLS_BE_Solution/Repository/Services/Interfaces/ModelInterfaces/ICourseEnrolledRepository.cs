@@ -11,5 +11,6 @@ namespace Repository.Services.Interfaces.ModelInterfaces
     {
         bool IsCourseRegisterByUser(int courseId, int userId);
         void CreateCourseEnrolled(CourseEnrolledCreateDtoForCustomer ceInfo);
+        List<CourseEnrolledReadDtoForCustomer> GetAllByUserIdForCustomer(int userId);
     }
 }

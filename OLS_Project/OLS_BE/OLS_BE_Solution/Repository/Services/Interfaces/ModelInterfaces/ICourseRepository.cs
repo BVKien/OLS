@@ -10,7 +10,7 @@ namespace Repository.Services.Interfaces.ModelInterface
         List<CourseReadDtoForCustomer> GetAllCourseByLearningPathIdForCustomer(int learningPathId);
 
         // == admin == 
-        List<CourseReadDtoForAdmin> GetAllCourseForAdmin();
+        List<CourseReadDtoForAdmin> GetAllCourseForAdmin(int lpId);
         CourseReadDtoForAdmin GetCourseByCourseIdForAdmin(int courseId);
         void CreateCourse(CourseCreateDtoForAdmin course);
         void UpdateCourse(int courseId, CourseUpdateDtoForAdmin course);

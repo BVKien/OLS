@@ -20,6 +20,13 @@ namespace BusinessObject.Profiles.ModelProfiles
                 .ReverseMap();
 
             // == admin == 
+            CreateMap<User, UserReadDtoForAdmin>() 
+                .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.UserRoleRole.RoleName))
+                .ReverseMap();
+
+            CreateMap<User, UserUpdateDtoForAdmin>().ReverseMap();
+            CreateMap<User, UserUpdateDtoForAdmin>().ReverseMap();
+
         }
     }
 }

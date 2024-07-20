@@ -28,7 +28,7 @@ const adminRoutes = {
     coursemanager: '/admin/course-manager',
     lessonmanager: '/admin/lesson-manager',
     usermanager: '/admin/user-manager',
-    blogmanager: '/admin/blog-manager',
+    blogmanager: '/expert/blog-manager',
 };
 
 export { routes, adminRoutes };

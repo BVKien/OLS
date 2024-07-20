@@ -22,8 +22,8 @@ namespace Repository.Services.Implements.ModelImplement
             => _courseDao.GetAllCourseByLearningPathIdForCustomer(learningPathId);
 
         // == admin ==
-        public List<CourseReadDtoForAdmin> GetAllCourseForAdmin()
-            => _courseDao.GetAllCourseForAdmin();
+        public List<CourseReadDtoForAdmin> GetAllCourseForAdmin(int lpId)
+            => _courseDao.GetAllCourseForAdmin(lpId);
         public CourseReadDtoForAdmin GetCourseByCourseIdForAdmin(int courseId)
             => _courseDao.GetCourseByCourseIdForAdmin(courseId);
         public void CreateCourse(CourseCreateDtoForAdmin course)

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BusinessObject.Dtos.CourseEnrolledDtos;
 using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +62,28 @@ namespace DataAccess.Dao.ModelDao
                 }
             }
             catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        // get all by user id 
+        public List<CourseEnrolledReadDtoForCustomer> GetAllByUserIdForCustomer(int userId)
+        {
+            try
+            {
+                var ceList = new List<CourseEnrolledReadDtoForCustomer>();
+                using(var context = new OLS_PRN231_V1Context())
+                {
+                    var list = context.CourseEnrolleds
+                        .Where(ce => ce.UserUserId == userId)
+                        .Include(ce => ce.CourseCourse)
+                        .ToList();
+                    ceList = _mapper.Map<List<CourseEnrolledReadDtoForCustomer>>(list);
+                }
+                return ceList;
+            }
+            catch(Exception ex)
             {
                 throw new Exception(ex.Message);
             }

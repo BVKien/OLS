@@ -6,11 +6,11 @@ const ProtectedRoute = ({ children, adminOnly = false }) => {
     const { user, loading } = useAuth();
 
     if (!user) {
-        return <Navigate to="/login" replace />;
+        return <Navigate to="/" replace />;
     }
 
-    if (adminOnly && user.roleName !== 'Admin') {
-        return <Navigate to="/" replace />;
+    if (adminOnly && user.roleName !== 'Admin' && user.roleName !== 'Expert') {
+        return <Navigate to="/home" replace />;
     }
 
     return children;

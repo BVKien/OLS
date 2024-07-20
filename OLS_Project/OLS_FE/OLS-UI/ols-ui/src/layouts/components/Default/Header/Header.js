@@ -3,6 +3,8 @@ import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -22,6 +24,9 @@ import { UploadIcon, NotificationIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '~/layouts/components/Default/Search';
 import config from '~/config';
+
+// customer api
+import customerApi from '~/services/apis/customerApi';
 
 const cx = classNames.bind(styles);
 
@@ -57,7 +62,25 @@ const MENU_ITEMS = [
 ];
 
 const Header = () => {
+    // -- User --
+    const [userDetails, setUserDetails] = useState('');
     const currentUser = true; // Replace with actual authentication logic
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user ? user.userId : null;
+
+    // Fetch user details by userId
+    useEffect(() => {
+        const fetchUserDetailsByUserId = async () => {
+            try {
+                const responseUser = await axios.get(customerApi.user.get_user_info + '/' + userId);
+                setUserDetails(responseUser.data);
+            } catch (error) {
+                console.error('Error fetching user:', error);
+            }
+        };
+
+        fetchUserDetailsByUserId();
+    }, [userId]);
 
     const navigate = useNavigate();
 
@@ -120,11 +143,7 @@ const Header = () => {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <Image
-                                className={cx('user-avatar')}
-                                src="https://gitlab.com/uploads/-/system/user/avatar/14507009/avatar.png?width=96"
-                                alt="Bui Van Kien"
-                            />
+                            <Image className={cx('user-avatar')} src={userDetails.image} alt={userDetails.fullName} />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />

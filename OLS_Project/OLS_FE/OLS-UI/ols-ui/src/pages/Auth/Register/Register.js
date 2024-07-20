@@ -48,8 +48,8 @@ const Register = () => {
 
                     // Redirect based on user role
                     if (userRole === 'Customer') {
-                        navigate('/'); // Redirect to homepage
-                    } else if (userRole === 'Admin') {
+                        navigate('/home'); // Redirect to homepage
+                    } else if (userRole === 'Admin' || userRole === 'Expert') {
                         navigate('/admin'); // Redirect to admin page
                     } else {
                         setErrorMessage('Unauthorized role.');

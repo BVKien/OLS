@@ -11,7 +11,6 @@ import { faBars, faArrowRight, faPen, faTrash, faX, faEllipsis } from '@fortawes
 import { faComment, faImage } from '@fortawesome/free-regular-svg-icons';
 import Image from '~/components/Image';
 import Button from '~/components/Button';
-import QRCode from '~/assets/images/payment/QRCode.jpg';
 import config from '~/config';
 
 // customer api
@@ -132,9 +131,9 @@ const CourseInProgress = () => {
     const courseId = urlParams.get('courseId');
     const lessonId = urlParams.get('lessonId');
 
-    // Self defined
-    const userId = 46; // hard code
-    const isCurrentUser = userDetails && userDetails.userId === userId;
+    // Local storage
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user ? user.userId : null;
 
     // -- Course content --
     // Toggle chapter
@@ -506,22 +505,42 @@ const CourseInProgress = () => {
     }, [selectedAskIdForActionEdit]);
 
     // Handle change value of user update input
-    const handleUpdateInputChange = (event) => {
+    const handleUpdateInputChange = async (event) => {
         const { name, value, files } = event.target;
 
         if (name === 'image' && files && files[0]) {
-            // Read image and update state preview
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setSelectedAskUpdateImage(reader.result);
-            };
-            reader.readAsDataURL(files[0]);
-        }
+            const formData = new FormData();
+            formData.append('image', files[0]);
 
-        setUserUpdateAskInput({
-            ...userUpdateAskInput,
-            [name]: value,
-        });
+            try {
+                const response = await axios.post('https://localhost:7003/api/Upload/UploadImage', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+
+                if (response.data && response.data.imageUrl) {
+                    const imageUrl = response.data.imageUrl;
+
+                    setUserUpdateAskInput((prevInput) => ({
+                        ...prevInput,
+                        image: imageUrl,
+                    }));
+
+                    setSelectedAskUpdateImage(imageUrl);
+                    console.log('Image uploaded:', imageUrl);
+                } else {
+                    console.error('Invalid response data:', response.data);
+                }
+            } catch (error) {
+                console.error('Error uploading image:', error);
+            }
+        } else {
+            setUserUpdateAskInput((prevInput) => ({
+                ...prevInput,
+                [name]: value,
+            }));
+        }
     };
 
     // Handle update ask by askId
@@ -613,22 +632,43 @@ const CourseInProgress = () => {
     }, [selectedReplyIdForActionEdit]);
 
     // Handle change value of user update input - Reply
-    const handleUpdateReplyInputChange = (event) => {
+    const handleUpdateReplyInputChange = async (event) => {
         const { name, value, files } = event.target;
 
         if (name === 'image' && files && files[0]) {
-            // Read image and update state preview
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setSelectedReplyUpdateImage(reader.result);
-            };
-            reader.readAsDataURL(files[0]);
-        }
+            const formData = new FormData();
+            formData.append('image', files[0]);
 
-        setUserUpdateReplyInput({
-            ...userUpdateReplyInput,
-            [name]: value,
-        });
+            try {
+                const response = await axios.post('https://localhost:7003/api/Upload/UploadImage', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+
+                if (response.data && response.data.imageUrl) {
+                    const imageUrl = response.data.imageUrl;
+
+                    setSelectedReplyUpdateImage(imageUrl);
+
+                    setUserUpdateReplyInput((prevInput) => ({
+                        ...prevInput,
+                        image: imageUrl,
+                    }));
+
+                    console.log('Image uploaded:', imageUrl);
+                } else {
+                    console.error('Invalid response data:', response.data);
+                }
+            } catch (error) {
+                console.error('Error uploading image:', error);
+            }
+        } else {
+            setUserUpdateReplyInput((prevInput) => ({
+                ...prevInput,
+                [name]: value,
+            }));
+        }
     };
 
     // Handle update reply by arId
@@ -637,30 +677,20 @@ const CourseInProgress = () => {
 
         try {
             await axios.put(
-                customerApi.conversation.update_ask_or_reply +
-                    '/' +
-                    selectedReplyIdForActionEdit +
-                    '/' +
-                    userId +
-                    '/' +
-                    discussDetails.discussId,
+                `${customerApi.conversation.update_ask_or_reply}/${selectedReplyIdForActionEdit}/${userId}/${discussDetails.discussId}`,
                 userUpdateReplyInput,
             );
             console.log('Reply update success', userUpdateReplyInput);
-            // Recall Api after update success
+            // Recall API after update success
             const responseReplies = await axios.get(
-                customerApi.conversation.get_all_reply_of_asker_in_discussion +
-                    '/' +
-                    discussDetails.discussId +
-                    '/' +
-                    replyDetails.replyForAskId,
+                `${customerApi.conversation.get_all_reply_of_asker_in_discussion}/${discussDetails.discussId}/${replyDetails.replyForAskId}`,
             );
             setReplies(responseReplies.data);
 
             setSelectedReplyIdForActionEdit(null);
             setSelectedReplyIdForActions(null);
         } catch (error) {
-            console.error('Error updating ask:', error);
+            console.error('Error updating reply:', error);
         } finally {
             setLoading(false);
         }
@@ -698,25 +728,49 @@ const CourseInProgress = () => {
     };
 
     // Handle change value of user reply input
-    const handleUserReplyInputChange = (event, askId) => {
+    const handleUserReplyInputChange = async (event, askId) => {
         const { name, value, files } = event.target;
 
         if (name === 'image' && files && files[0]) {
-            // Read image and update state preview
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setSelectedReplyImage(reader.result);
-            };
-            reader.readAsDataURL(files[0]);
-        }
+            const formData = new FormData();
+            formData.append('image', files[0]);
 
-        setUserReplyInput({
-            ...userReplyInput,
-            replyForAskId: askId, // Use the provided askId
-            userUserId: userDetails.userId,
-            discussDiscussId: discussDetails.discussId,
-            [name]: value,
-        });
+            try {
+                const response = await axios.post('https://localhost:7003/api/Upload/UploadImage', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data',
+                    },
+                });
+
+                if (response.data && response.data.imageUrl) {
+                    const imageUrl = response.data.imageUrl;
+
+                    setSelectedReplyImage(imageUrl);
+
+                    setUserReplyInput((prevInput) => ({
+                        ...prevInput,
+                        replyForAskId: askId,
+                        userUserId: userDetails.userId,
+                        discussDiscussId: discussDetails.discussId,
+                        image: imageUrl,
+                    }));
+
+                    console.log('Image uploaded:', imageUrl);
+                } else {
+                    console.error('Invalid response data:', response.data);
+                }
+            } catch (error) {
+                console.error('Error uploading image:', error);
+            }
+        } else {
+            setUserReplyInput((prevInput) => ({
+                ...prevInput,
+                replyForAskId: askId,
+                userUserId: userDetails.userId,
+                discussDiscussId: discussDetails.discussId,
+                [name]: value,
+            }));
+        }
     };
 
     // Handle submit reply input - Create reply
@@ -726,22 +780,17 @@ const CourseInProgress = () => {
         try {
             await axios.post(createReplyApiUrl, userReplyInput);
             console.log('Create reply success', userReplyInput);
-            // Recall Api after update success
+            // Recall API after update success
             const responseReplies = await axios.get(
-                customerApi.conversation.get_all_reply_of_asker_in_discussion +
-                    '/' +
-                    discussDetails.discussId +
-                    '/' +
-                    userReplyInput.replyForAskId,
+                `${customerApi.conversation.get_all_reply_of_asker_in_discussion}/${discussDetails.discussId}/${userReplyInput.replyForAskId}`,
             );
             setReplies(responseReplies.data);
-            setUserReplyInput(createReplyData);
-            setSelectedReplyImage(null);
+            setUserReplyInput(createReplyData); // Reset the form
+            setSelectedReplyImage(null); // Reset the image preview
         } catch (error) {
             console.error('Error creating reply:', error);
         }
     };
-
     // Handle remove reply image preview
     const handleRemoveReplyImage = () => {
         setSelectedReplyImage(null);
@@ -1512,11 +1561,14 @@ const CourseInProgress = () => {
                                                             />
                                                             <FontAwesomeIcon icon={faImage} />
                                                         </label>
-                                                        {/* Curent image */}
-                                                        {askDetails.image && (
+                                                        {/* Current image */}
+                                                        {askDetails.image && !selectedAskUpdateImage && (
                                                             <div>
                                                                 <div className={cx('image-preview__icon-wrap')}>
-                                                                    <button onClick={handleRemoveAskUpdateImage}>
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={handleRemoveAskUpdateImage}
+                                                                    >
                                                                         <FontAwesomeIcon
                                                                             icon={faX}
                                                                             className={cx('image-preview__icon')}
@@ -1525,7 +1577,7 @@ const CourseInProgress = () => {
                                                                 </div>
                                                                 <Image
                                                                     src={askDetails.image}
-                                                                    alt="Preview"
+                                                                    alt="Current Image"
                                                                     className={cx('image-preview')}
                                                                 />
                                                             </div>
@@ -1535,7 +1587,10 @@ const CourseInProgress = () => {
                                                         {selectedAskUpdateImage && (
                                                             <div>
                                                                 <div className={cx('image-preview__icon-wrap')}>
-                                                                    <button onClick={handleRemoveAskUpdateImage}>
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={handleRemoveAskUpdateImage}
+                                                                    >
                                                                         <FontAwesomeIcon
                                                                             icon={faX}
                                                                             className={cx('image-preview__icon')}
@@ -1561,6 +1616,7 @@ const CourseInProgress = () => {
                                                             <Button
                                                                 outline
                                                                 small
+                                                                type="button"
                                                                 onClick={() => handleToggleAskActionEdit(ask.askId)}
                                                                 className={cx('discuss-input__button-cancel')}
                                                             >
@@ -1569,6 +1625,7 @@ const CourseInProgress = () => {
                                                         </div>
                                                     </div>
                                                 </form>
+
                                                 {/* Ask - Delete */}
                                                 <div className={cx('discuss-ask__actions-delete')}>
                                                     <div className={cx('row')}>

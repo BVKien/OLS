@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { BrowserRouter as Router, Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 // Components
 import styles from './Header.module.scss';
@@ -15,15 +16,33 @@ import 'tippy.js/dist/tippy.css'; // optional - cho việc hiển thị tooltip
 import Image from '~/components/Image';
 import config from '~/config';
 
+// customer api
+import customerApi from '~/services/apis/customerApi';
+
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [];
 
 const Header = () => {
-    // current User
-    // User status -> if logged in or not
-    const currentUser = true;
-    //const currentUser = false;
+    // -- User --
+    const [userDetails, setUserDetails] = useState('');
+    const currentUser = true; // Replace with actual authentication logic
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user ? user.userId : null;
+
+    // Fetch user details by userId
+    useEffect(() => {
+        const fetchUserDetailsByUserId = async () => {
+            try {
+                const responseUser = await axios.get(customerApi.user.get_user_info + '/' + userId);
+                setUserDetails(responseUser.data);
+            } catch (error) {
+                console.error('Error fetching user:', error);
+            }
+        };
+
+        fetchUserDetailsByUserId();
+    }, [userId]);
 
     // handle menu change - handle logic
     const handleMenuChange = (menuItem) => {
@@ -50,9 +69,7 @@ const Header = () => {
             to: '/admin',
         },
         {
-            icon: <FontAwesomeIcon icon={faGear} />,
-            title: 'Cài đặt',
-            to: '/admin/settings',
+            icon: <FontAwesomeIcon icon={faSignOut} />,
         },
     ];
 
@@ -68,7 +85,7 @@ const Header = () => {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <span className={cx('welcome-admin')}>Xin chào Admin</span>
+                            <span className={cx('welcome-admin')}>Xin chào {user.roleName}</span>
                         </>
                     ) : (
                         <>
@@ -87,11 +104,7 @@ const Header = () => {
                     {/* menu - nút ... dọc*/}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <Image
-                                className={cx('user-avatar')}
-                                src="https://gitlab.com/uploads/-/system/user/avatar/14507009/avatar.png?width=96"
-                                alt="Bui Van Kien"
-                            />
+                            <Image className={cx('user-avatar')} src={userDetails.image} alt={userDetails.fullName} />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />

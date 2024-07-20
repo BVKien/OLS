@@ -49,5 +49,19 @@ namespace OLSWebAPI.Controllers.CustomerControllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("get_course_enrolled_of_user/{user_id}")]
+        public ActionResult<IEnumerable<CourseEnrolledReadDtoForCustomer>> GetAll(int user_id)
+        {
+            try
+            {
+                var list = _repo.GetAllByUserIdForCustomer(user_id);
+                return Ok(list);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

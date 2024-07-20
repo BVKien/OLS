@@ -15,12 +15,12 @@ namespace OLSWebAPI.Controllers.AdminControllers
             _repo = repo;
         }
 
-        [HttpGet("get_all_course")]
-        public ActionResult<IEnumerable<CourseReadDtoForAdmin>> GetAllCourse()
+        [HttpGet("get_all_course/{learning_path_id}")]
+        public ActionResult<IEnumerable<CourseReadDtoForAdmin>> GetAllCourse(int learning_path_id)
         {
             try
             {
-                var courseList = _repo.GetAllCourseForAdmin();
+                var courseList = _repo.GetAllCourseForAdmin(learning_path_id);
                 return Ok(courseList);
             }
             catch (Exception ex)

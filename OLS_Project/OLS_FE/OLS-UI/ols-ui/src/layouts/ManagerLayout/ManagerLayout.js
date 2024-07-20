@@ -1,11 +1,9 @@
-// From react and libs
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// Components
 import styles from './ManagerLayout.module.scss';
 import Header from '~/layouts/components/Manager/Header';
 import Footer from '~/layouts/components/Manager/Footer';
@@ -14,9 +12,13 @@ import config from '~/config';
 
 const cx = classNames.bind(styles);
 
-// Nhận children từ App.js
+// Nhận children và userRole từ App.js
 const ManagerLayout = ({ children }) => {
     const [activeItem, setActiveItem] = useState(null);
+
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user ? user.userId : null;
+    const userRole = user.roleName;
 
     // Toggle
     const [clickCount, setClickCount] = useState(0);
@@ -33,9 +35,6 @@ const ManagerLayout = ({ children }) => {
                 <div className={cx('grid')}>
                     <div className={cx('row')}>
                         <div className={cx('col-12')}>
-                            {/* Sidebar */}
-                            {/* Seperate quite complicate, still not have times to maximise it */}
-                            {/* Tách Sidebar ra khá phức tạp, chưa có thời gian tối ưu */}
                             <div className={cx('side-bar-wrap')}>
                                 <div className={cx('action-wrap')}>
                                     <div className={cx('action-menu')} onClick={handleToggleMenu}>
@@ -49,42 +48,62 @@ const ManagerLayout = ({ children }) => {
                                     })}
                                 >
                                     <ul className={cx('manager-list')}>
-                                        <li className={cx('manager-item')}>
-                                            <Link
-                                                to={config.adminRoutes.dashboard}
-                                                className={cx('manager-item__link')}
-                                            >
-                                                <FontAwesomeIcon icon={faGauge} className={cx('manager-item__icon')} />
-                                                <span className={cx('manager-item__title')}>Điều khiển</span>
-                                            </Link>
-                                        </li>
-                                        <li className={cx('manager-item')}>
-                                            <Link
-                                                to={config.adminRoutes.usermanager}
-                                                className={cx('manager-item__link')}
-                                            >
-                                                <FontAwesomeIcon icon={faUsers} className={cx('manager-item__icon')} />
-                                                <span className={cx('manager-item__title')}>Người dùng</span>
-                                            </Link>
-                                        </li>
-                                        <li className={cx('manager-item')}>
-                                            <Link
-                                                to={config.adminRoutes.learningpathsmanager}
-                                                className={cx('manager-item__link')}
-                                            >
-                                                <FontAwesomeIcon icon={faBook} className={cx('manager-item__icon')} />
-                                                <span className={cx('manager-item__title')}>Lộ trình</span>
-                                            </Link>
-                                        </li>
-                                        <li className={cx('manager-item')}>
-                                            <Link
-                                                to={config.adminRoutes.blogmanager}
-                                                className={cx('manager-item__link')}
-                                            >
-                                                <FontAwesomeIcon icon={faBlog} className={cx('manager-item__icon')} />
-                                                <span className={cx('manager-item__title')}>Bài viết</span>
-                                            </Link>
-                                        </li>
+                                        {userRole === 'Admin' && (
+                                            <li className={cx('manager-item')}>
+                                                <Link
+                                                    to={config.adminRoutes.dashboard}
+                                                    className={cx('manager-item__link')}
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faGauge}
+                                                        className={cx('manager-item__icon')}
+                                                    />
+                                                    <span className={cx('manager-item__title')}>Điều khiển</span>
+                                                </Link>
+                                            </li>
+                                        )}
+                                        {userRole === 'Admin' && (
+                                            <li className={cx('manager-item')}>
+                                                <Link
+                                                    to={config.adminRoutes.usermanager}
+                                                    className={cx('manager-item__link')}
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faUsers}
+                                                        className={cx('manager-item__icon')}
+                                                    />
+                                                    <span className={cx('manager-item__title')}>Người dùng</span>
+                                                </Link>
+                                            </li>
+                                        )}
+                                        {userRole === 'Admin' && (
+                                            <li className={cx('manager-item')}>
+                                                <Link
+                                                    to={config.adminRoutes.learningpathsmanager}
+                                                    className={cx('manager-item__link')}
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faBook}
+                                                        className={cx('manager-item__icon')}
+                                                    />
+                                                    <span className={cx('manager-item__title')}>Lộ trình</span>
+                                                </Link>
+                                            </li>
+                                        )}
+                                        {userRole === 'Expert' && (
+                                            <li className={cx('manager-item')}>
+                                                <Link
+                                                    to={config.adminRoutes.blogmanager}
+                                                    className={cx('manager-item__link')}
+                                                >
+                                                    <FontAwesomeIcon
+                                                        icon={faBlog}
+                                                        className={cx('manager-item__icon')}
+                                                    />
+                                                    <span className={cx('manager-item__title')}>Bài viết</span>
+                                                </Link>
+                                            </li>
+                                        )}
                                     </ul>
                                 </nav>
                             </div>
@@ -105,6 +124,7 @@ const ManagerLayout = ({ children }) => {
 
 ManagerLayout.propTypes = {
     children: PropTypes.node.isRequired,
+    userRole: PropTypes.string.isRequired, // Thêm propType cho userRole
 };
 
 export default ManagerLayout;

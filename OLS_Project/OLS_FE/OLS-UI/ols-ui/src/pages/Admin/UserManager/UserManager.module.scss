@@ -419,3 +419,11 @@
     color: var(--white);
     background-color: var(--primary);
 }
+
+.user-manager-list__table-body__content__item-status.active {
+    color: var(--primary); /* Màu xanh cho trạng thái Active */
+}
+
+.user-manager-list__table-body__content__item-status.inactive {
+    color: red; /* Màu đỏ cho trạng thái Inactive */
+}

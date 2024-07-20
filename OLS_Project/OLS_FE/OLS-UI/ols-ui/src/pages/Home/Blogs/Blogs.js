@@ -85,13 +85,13 @@ const Blogs = () => {
                         </div>
                     ))}
                     {/* Col */}
-                    <div className={cx('col-3')}>
+                    {/* <div className={cx('col-3')}>
                         <div className={cx('topic-content')}>
                             <div className={cx('topic-content__item')}>
                                 <span className={cx('topic-content__item-name')}>Topic 1</span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

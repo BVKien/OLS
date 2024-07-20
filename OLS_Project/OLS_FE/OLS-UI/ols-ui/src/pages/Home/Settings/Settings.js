@@ -12,9 +12,31 @@ import Image from '~/components/Image';
 import Button from '~/components/Button';
 import { Link } from 'react-router-dom';
 
+// api
+import customerApi from '~/services/apis/customerApi';
+
 const cx = classNames.bind(styles);
 
 const Settings = () => {
+    // -- User --
+    const [userDetails, setUserDetails] = useState('');
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userId = user ? user.userId : null;
+
+    // Fetch user details by userId
+    useEffect(() => {
+        const fetchUserDetailsByUserId = async () => {
+            try {
+                const responseUser = await axios.get(customerApi.user.get_user_info + '/' + userId);
+                setUserDetails(responseUser.data);
+            } catch (error) {
+                console.error('Error fetching user:', error);
+            }
+        };
+
+        fetchUserDetailsByUserId();
+    }, [userId]);
+
     return (
         <main className={cx('wrapper')}>
             {/* Grid */}
@@ -42,35 +64,37 @@ const Settings = () => {
                             <div className={cx('settings__user-info')}>
                                 <div className={cx('user-info__avatar-wrap')}>
                                     {/* Select image from file when click to image */}
-                                    <Image
-                                        src={
-                                            'https://gitlab.com/uploads/-/system/user/avatar/14507009/avatar.png?width=96'
-                                        }
-                                        alt="avatar"
-                                        className={cx('user-info__avatar')}
-                                    />
+                                    <Image src={userDetails.image} alt="avatar" className={cx('user-info__avatar')} />
                                 </div>
                                 <div className={cx('user-info__name-wrap')}>
-                                    <p className={cx('user-info__title')}>Họ tên</p>
-                                    <input type="text" value={'Bùi Văn Kiên'} className={cx('user-info__name-input')} />
+                                    <p className={cx('user-info__title')}>Họ và tên</p>
+                                    <input
+                                        type="text"
+                                        value={userDetails.fullName}
+                                        className={cx('user-info__name-input')}
+                                    />
                                 </div>
                                 <div className={cx('user-info__email-wrap')}>
                                     <p className={cx('user-info__title')}>Email</p>
                                     <input
                                         type="text"
-                                        value={'kbui0212@gmail.com'}
+                                        value={userDetails.email}
                                         className={cx('user-info__email-input')}
                                     />
                                 </div>
                                 <div className={cx('user-info__phone-wrap')}>
                                     <p className={cx('user-info__title')}>Số điện thoại</p>
-                                    <input type="text" value={'0961498113'} className={cx('user-info__phone-input')} />
+                                    <input
+                                        type="text"
+                                        value={userDetails.phone}
+                                        className={cx('user-info__phone-input')}
+                                    />
                                 </div>
                                 <div className={cx('user-info__password-wrap')}>
                                     <p className={cx('user-info__title')}>Mật khẩu</p>
                                     <input
                                         type="password"
-                                        value={'password'}
+                                        value={userDetails.password}
                                         className={cx('user-info__password-input')}
                                     />
                                 </div>
