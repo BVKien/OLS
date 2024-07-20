@@ -12,6 +12,7 @@
 
 ## Documentation 
 * Link doc và quản lý dự án: https://docs.google.com/document/d/1eBnk5G2QKJD_Kb2lZHuhyHZ94d6zml_0KsX5Fg-MDDE/edit
+* Link 2: https://docs.google.com/document/d/1ALPt211XPtt3A2GljKVl2qs86j0pPWG0ZxkjU88j5Ug/edit
 
 ## Back-end:
 * IDE Visual studio
